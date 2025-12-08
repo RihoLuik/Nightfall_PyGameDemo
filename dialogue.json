@@ -1,0 +1,146 @@
+{
+  "scenes": [
+    {
+      "id": "scene_1",
+      "background": "street_day.png",
+      "characters": ["player.png", "partner.png"],
+      "dialogue": [
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "Fuck it's freezing... and there's no snow...",
+          "voice": "vera_intro1",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "What kind of a Christmas week is this supposed to be?",
+          "voice": "vera_intro2",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "Ugh... should be close anyway...",
+          "voice": "vera_intro3",
+          "emotion": "angry"
+        },
+        {
+          "type": "narration",
+          "line": "A few minutes later...",
+          "voice": "footsteps1"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "You're late.",
+          "voice": "ellie_intro",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "What took you so long?",
+          "voice": "ellie_intro",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "You know what? Don't answer that.",
+          "voice": "ellie_intro",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "You ready for the shift?",
+          "voice": "ellie_intro",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "Of course I am.",
+          "voice": "ellie_intro",
+          "emotion": "angry"
+        },
+        {
+          "type": "choice",
+          "timer": 6,
+          "choices": [
+            {
+              "text": "Let's just get this over with.",
+              "points": -1,
+              "branch": [
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Eager much to be done already?",
+                  "voice": "ellie_react1",
+                  "emotion": "angry"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "*sigh*",
+                  "voice": "ellie_react2",
+                  "emotion": "angry"
+                }
+              ]
+            },
+            {
+              "text": "I'll do my best.",
+              "points": 1,
+              "branch": [
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Sure you will.",
+                  "voice": "ellie_react3",
+                  "emotion": "angry"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "But we'll see about it, Rookie.",
+                  "voice": "ellie_react4",
+                  "emotion": "angry"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Alright...",
+                  "voice": "player_ack1",
+                  "emotion": "angry"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "Come on, we're burning daylight here.",
+          "voice": "ellie_continue1",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "I'm coming, I'm coming!",
+          "voice": "player_hurry1",
+          "emotion": "angry"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "Good, let's check that street over there.",
+          "voice": "ellie_continue2",
+          "emotion": "angry"
+        }
+      ]
+    }
+  ]
+}

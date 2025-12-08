@@ -1,0 +1,410 @@
+Character List:
+Char1 - Vera (Visi)
+Char2 - Ellie
+Char3 - Langston
+Char4 - Ben (SDN)
+Char5 - Kathie
+Char6 - Diane
+Char7 - Robber 2
+
+
+Intro (not included in the Proof of Concept a.k.a. Lõpuprojekt):
+
+*Vera (Visi) enters a café*
+Char2 () - There you are Vera.
+Char2 () - I was starting to wonder if you'd even show up.
+Char1 () - I know I know, traffic was being a bitch to me as always.
+Char1 () - How've you been Ellie? It's been... what? A week and a half since that whole... case and shitshow.
+Char2 () - Could be better, this arm's been... weird to get used to... I'm sure it'll get better soon.
+Char2 () - But enough about me, how've you been Visi?
+Char1 () - *soft snort* Aw mayun, I was hoping to dodge the question...
+Char2 () - Not on my watch, genius. Now come on, spit.
+Char1 () - Alright, fine. I've been... better.
+Char1 () - Been a bit easier to... breathe, now that the case is over and that... asshat being dead.
+Char1 () - You sure you're fine? It's been a while since... y'know... No pain or... anything?
+Char2 () - Visi, you worry too much. I'm fi-
+*Langston, SDN, Kathie & Diane enter the café*
+Char2 () - -ine... More guests and familiar faces. 
+Char1 () - Hm? Oh, it's Kathie and Diane... and the two guys from our first patrol together.
+Char1 () - What were their names again?
+Char2 () - Them? Langston and... Ben... I think?
+Char3 () - *to SDN* That's the name you chose? Ben?
+Char3 () - Did you binge Galaxy Wars or something?
+Char4 () - Oh ha ha, real funny.
+Char6 () - It is better than SDN if you ask me, I would've called him Dave for gags.
+Char5 () - Of course you would.
+Char2 () - *chuckles* There's your answer Visi.
+Char1 () - Right right, I'll try to remember.
+Char1 (teasing) - How did our first patrol go again? I swear I can't remember...
+Char2 () - Oh don't even start you troublemaker, but fine, I'll tell.
+Char2 () - But only because you're cute. *boops Visi's nose*
+Char4 () - Ooo, you two telling stories? I love stories.
+Char1 () - Eek-!
+Char2 () - *chuckles* Jumpy as always Visi.
+Char2 () - *looks over to Kathie, Diane and Langston* If you three wanna join in for a story then get over here.
+Char3 () - *Langston goes over to the table* Sure, why not.
+Char5 () - Come on Diane. *grabs Diane's hand and pulls her along*
+Char6 () - Wait wh- eek-!
+Char2 () - Alright... so two years ago, it was Vera's first patrol with me.
+
+
+--- 2 YEARS AGO ---
+
+
+Scene 1:
+
+Char1 (annoyed) - Fuck it's freezing... and there's no snow...
+Char1 (annoyed) - What kind of a Christmas week is this supposed to be?
+Char1 (thought) - Should be around the corner... I think?
+*a few minutes later*
+Char2 (annoyed) - You're late.
+Char2 (annoyed) - What took you so long?
+Char2 (annoyed) - You know what? Don't answer that.
+Char2 (neutral) - You ready for the shift?
+Char1 (neutral) - Of course I am.
+Char1 (thought):
+ - Let's just get this over with. (-1)
+ - I'll do my best. (+1)
+
+-- "Let's just get this over with." response --
+Char2 (annoyed) - Eager much to be done already?
+Char2 (annoyed) - *sigh*
+
+-- "I'll do my best." response --
+Char2 (smiling) - Sure you will.
+Char2 (neutral) - But we'll see about it, Rookie.
+Char1 (neutral) - Alright...
+
+-- back to linear --
+Char2 (neutral) - Come on, we're burning daylight here.
+Char1 (neutral) - I'm coming, I'm coming!
+Char2 (neutral) - Good, let's check that street over there.
+
+-- walking on normal street --
+
+Char2 (neutral) - See anything?
+Char1 (neutral) - Nope... nothing yet.
+Char2 (neutral) - I swear if this is gonna be a nothing patrol...
+Char2 (annoyed) - Rather not spend time in this blistering cold...
+Char1 (thought):
+ - Hm. (-1)
+ - Surely it won't... wanna hear a joke? (+1)
+
+-- "Hm." response --
+Char2 (annoyed) - Not really talkative are you?
+Char2 (annoyed) - ...
+Char2 (annoyed) - Whatever.
+
+-- "Surely it won't... wanna hear a joke?" response" --
+Char2 (confused) - ...Oookay...? Sure... do your worst.
+Char1 (neutral) - Alright, um... what do you call a robber who has electricity and invisibility powers?
+Char1 (smiling) - Like, y'know, lightning and poof, I'm gone type shit?
+Char2 (neutral) - Right...
+Char2 (neutral) - 1. Watch your language. And 2. what do you call them?
+Char1 (neutral) - A Vishocker... I-I mean... a Vishobber...
+Char1 (annoyed) - Wait- no, that sounds like a vacuum cleaner brand...
+Char1 (annoyed) - ...It sounded a lot cooler in my head.
+Char2 (neutral) - That's just terrible.
+Char1 (annoyed) - *muttering* yeah... used to sound cooler.
+Char2 (confused) - What?
+Char1 (neutral) - Nothing.
+Char2 (neutral) - Okaay...? Well...that is... one of the worst jokes I've heard in at least five years.
+Char2 (smiling) - ...But points for trying, I guess.
+Char1 (awkward) - Heh...eh... <- awkward chuckle
+
+-- Back to linear route --
+Char1 (neutral) - There.
+Char1 (neutral) - Looks like something's going down... should we go and check?
+Char2 (smiling) - Good eye. *muttering*
+Char2 (smiling) - Let's go.
+
+-- Going to the scene --
+
+Char2 (neutral) - Alright we're he-
+*two robbers appear out of nowhere from a store*
+Char2 (shocked) - Christ!
+Char2 (serious) - *running after the first one* GET BACK HERE!
+Char2 (serious) - GO GET THE OTHER ONE!
+Char1 (serious) - *goes after the second one*
+Char1 (serious) - GET BACK HERE!
+Char1 (annoyed) - Ugh... fuck...
+Char1 (serious) - *looks around: two routes, two choices: keep chasing, or cut them off.*
+Char1 (thought):
+ - Catch! (+1)
+ - Don't catch. (-1)
+
+-- "Don't catch." response --
+Char1 (serious) - Fuck it.
+Char1 (serious) - *continues running after 'em but fails to catch 'em*
+Char1 (annoyed) - SHIT!
+Char1 (annoyed) - I should've been faster...
+Char2 () - *approaches from behind with the first one* 
+Char2 (confused) - Where's the second one?
+Char2 (annoyed) - Don't tell me you let 'em get away...
+Char1 (annoyed) - *panting* ...what do you think?
+Char2 (disappointed) - *sigh* alright, first day on the job, happens.
+Char2 (annoyed) - We'll find 'em later, let's just-
+Char2 (annoyed) - Ngh- stay still! Let's just get this bastard back to the presinct...
+Char2 (annoyed) - We got some interrogation to do...
+*cuts to an image with black background and white text "we ran out of budget for this :P" and then fades to black and then fades into the second scene*
+
+-- "Catch!" response --
+Char1 (serious) - This should cut 'em off.
+Char1 (serious) - *runs to the alternate path to cut 'em off*
+Char1 (serious) - Alright... any moment now... *takes a steady breath- holds it- body flickers, then fades from sight*
+Char7 () - *running through the path*
+Char7 () - Think she gave up... fuck yeah!
+Char1 (serious) - *kicks a nearby trash can over to make the second robber slip*
+Char7 () - WAITWAIT-!
+Char1 (serious) - *leaps onto the robber*
+Char1 (smiling) - GOTCHA!
+Char1 (neutral) - *realises that they knocked the robber out by accident* oops...
+Char1 (neutral) - Guess I'll just carry them back to her... *picks up the second robber*
+Char1 (neutral) - *carries the second robber over back to Ellie* Got 'em...
+Char2 (confused) - That's good... what happened to 'em?
+Char1 (nervous) - They uh... they ran into a wall. Yeah. A wall.
+Char2 (neutral) - Okay...? Well, let's bring 'em to the precinct.
+Char2 (neutral) - It's break time soon anyway.
+Char1 (neutral) - Oh, right, okay. *slightly heaving from the invisibility usage*
+Char2 (concerned) - You okay? You're breathing heavily.
+Char1 (neutral) - I'll be fine, just ran a bit faster than I'm used to.
+Char2 (neutral) - *nods slightly* alright.
+
+
+Scene 2:
+
+Char2 (neutral) - ...
+Char2 (neutral) - I never got your name rookie.
+Char2 (neutral) - Would be nice to know if you ask me.
+Char2 (teasing) - Or are you not talkative?
+Char1 (nervous) - ...Vera.
+Char2 (neutral) - Vera...?
+Char1 (neutral) - Yes, that is my name.
+Char2 (neutral) - Huh... faith and truth... that's...
+Char2 (smiling) - Kinda cute actually.
+Char2 (flustered) - *ahem*
+Char2 (flustered) - Forget I said anything.
+Char1 (neutral) - It's fine... what's your name?
+Char1 (smiling) - You know, only fair since I told you mine.
+Char2 (neutral) - Uh-huh, it's only fair.
+Char2 (smiling) - Name's Ellie.
+Char1 (thought) - Light and noble... I can see why.
+Char2 (smiling) - Light and noble? Why's that? You look into name meanings or something?
+Char1 (neutral) - Obviously, and that’s what your name means. I look into that stuff sometimes, just a habit y'know?
+Char1 (neutral) - Curiosity kills the cat... a little morbid meaning but all in all a literal thing that can happen.
+Char1 (annoyed) - I knew people like that. Friends, coworkers... idiots who poked into the wrong things.
+Char1 (annoyed) - They were idiots yes, but not everything's gonna be sunshine and rainbows...
+Char1 (neutral) - I'm sure you'd know that...
+Char2 (neutral) - You're right, I do... guess something like that is unavoidable in this line of work.
+Char1 (thought):
+ - Lighten up (+1)
+ - Ms. Negative (-1)
+ 
+-- "Ms. Negative" response --
+Char1 (annoyed) - Oh well, to hell with it, it's not like we're touchable.
+Char1 (annoyed) - I've gone my whole life going through shit and I'm still here.
+Char1 (annoyed) - I’ve seen hell like no one else, Ellie.
+Char1 (annoyed) - People messing with things they shouldn’t... and paying the price.
+Char1 (annoyed) - One by one. I just watched. I’m numb to it now.
+Char2 (annoyed) - ...what the fuck Vera? Are you insane? 
+Char2 (annoyed) - That's all you have to say? How did you even get through selection with such an attitude!?
+Char2 (annoyed) - You know what? I don't care, don't answer it.
+Char2 (annoyed) - I don't wanna hear it.
+Char2 (annoyed) - Not after such crap Ms. Negative.
+Char1 (sad) - I-... sorry... didn't mea- 
+Char2 (annoyed) - Sorry's not gonna cut it Vera.
+Char1 (sad) - I know... I didn't mean it.
+Char2 (annoyed) - ... *sighs*
+Char2 (annoyed) - Fine. Apology accepted, for now, just don't say stuff like that again or I will have to report it.
+Char1 (sad) - Hear you loud and clear, Ellie...
+
+-- "Lighten up" response --
+Char1 (neutral) - ...sooo uh... I'm not exactly a good conversation starter but uh...
+Char1 (neutral) - Do you have any... pets?
+Char1 (shy) - Just curious...
+Char2 (neutral) - Pets? Well if you really wanna know...
+Char2 (smiling) - A cat.
+Char1 (neutral) - A cat? 
+Char2 (smiling) - Yeah, a cat.
+Char1 (neutral) - That's nice... I... I always wanted one... never got one though.
+Char2 (sad) - Oh... sorry to hear that.
+Char2 (smiling) - I'm sure Grumpy would like you.
+Char1 (neutral) - Grumpy?
+Char2 (neutral) - Yeah, that's what I called 'em. They are quite literally, grumpy.
+Char1 (smiling) - *chuckles* That's... a nice name. I like it.
+Char2 (smiling) - Glad you think so.
+
+-- back to normal route --
+*Christmas lights flicker overhead as the two enjoy the break time*
+Char2 (disappointed) - *sigh* you ever wonder if we'd get a normal Christmas this week?
+Char2 (neutral) - Like with all the snow and stuff?
+Char2 (neutral) - I always hope we'd do, no snow is just... boring. Puddles and stuff all around.
+Char1 (thought):
+ - Hopeful (+1)
+ - Sad (+1)
+
+-- "Hopeful" response --
+Char1 (neutral) - I hope so. 
+Char1 (neutral) - It's not really Christmas if there's no snow right?
+Char1 (neutral) - All these puddles should be frozen or something by now.
+Char1 (annoyed) - It is freezing even in this warm outfit.
+Char2 (teasing) - Or you're just not used to the cold.
+Char2 (neutral) - These are pretty warm.
+Char1 (thought) - Not my point but okay...
+Char1 (neutral) - It should start snowing soon... really.
+Char2 (neutral) - You're right, it should...
+Char2 (neutral) - I just hope you're right.
+
+-- "Sad" response --
+Char1 (neutral) - It really wouldn't change much for me...
+Char2 (confused) - How so?
+Char1 (neutral) - Well... even if the snow was on the ground or not...
+Char1 (neutral) - I've never had a real Christmas.
+Char1 (sad) - No one to spend time with, to celebrate it...
+Char1 (sad) - Just loneliness in the cold.
+Char2 (confused) - ...why's that? You had parents to spend it with right?
+Char2 (confused) - ...right?
+Char2 (sad) - Oh...
+Char1 (sad) - I was just an orphan.
+Char1 (sad) - A freak accident.
+Char1 (sad) - It was years ago, but Christmas just... reminds me of it every time.
+Char2 (smiling) - I'm here.
+Char1 (confused) - ...What do you mean...?
+Char2 (smiling) - ...I'm here, Vera.
+Char2 (smiling) - That's what I mean.
+Char1 (neutral) - ...Thanks...
+Char2 (smiling) - You're welcome...
+
+-- back to neutral route --
+
+Char2 (neutral) - You know... I got an idea.
+Char1 (confused) - What's that?
+Char2 (neutral) - We could... spend the Christmas together.
+Char2 (neutral) - Then you wouldn't be alone... or cold.
+Char2 (smiling) - And I'm sure Grumpy would love to see someone new as well.
+Char1 (thought) - I'll have to think about it...
+Char1 (thought) - Not ready to give an answer right away.
+Char2 (neutral) - That's fine. I can ask again after the day's over?
+Char1 (neutral) - Sure.
+Char2 (neutral) - Now, we should start to head back.
+Char2 (neutral) - Break time's gonna be over soon.
+Char2 (neutral) - You ready to go?
+Char1 (neutral) - Oh uhm, yeah, I'm ready.
+Char2 (smiling) - Let's go then.
+
+
+Scene 2.5 (ONLY IF RELATIONSHIP POINTS ARE IN THE POSITIVES):
+
+Char1 (confused) - Where are we going?
+Char1 (confused) - Shouldn't we be going back to the precinct?
+Char2 (smiling) - We will, just... gimme a moment.
+Char1 (confused) - Ookay...? Just don't do anything drastic.
+Char2 (smiling) - I promise, I won't.
+Char1 (confused) - ...What are we doing near the festival stage?
+Char2 (smiling) - Just, trust me.
+Char1 (neutral) - You're being vague on purpose.
+Char2 (smiling) - No, I'm not.
+Char2 (smiling) - Just... trust me. Okay?
+Char1 (neutral) - Alright...
+Char1 (neutral) - I swear this is gonna go drastically-
+Char1 (confused) - *looks up* Wait... what's that above me?
+Char1 (confused) - Is that a... is that a mistletoe?
+Char1 (annoyed) - You little-... ugh. I hate you. You absolute tease...
+Char2 (teasing) - *chuckles* A little late for that.
+Char2 (teasing) - *gently grips Vera's chin* Now stay still.
+Char1 (neutral) - Okay...
+Char2 () - *leans in for a smooch under the mistletoe* 
+*screen cuts to black with a message "Sorry, budget ran out... again. No mistletoe scenes here :P" before fading out and fading into Scene 3* 
+
+
+Scene 3:
+
+Char2 (curious) - So, how was your first day rookie?
+Char2 (curious) - It was good right? I mean, I had a good enough time.
+Char2 (smiling) - At least considering how these patrol days usually go...
+Char1 (thought):
+ - It was fine. (-1)
+ - Better than I expected. (+1)
+
+-- "It was fine." response --
+Char1 (hesitant) - It was fine... I don't really... expect much from people or really anything in that matter...
+Char2 (annoyed) - Just fine? Really?
+Char1 (neutral) - Yeah. Just fine. I don't think I have to repeat myself.
+Char2 (annoyed) - You know, sometimes you're really hard to read, you know that?
+Char2 (annoyed) - And it's still the first day.
+Char2 (disappointed) - Just... be honest for once.
+Char2 (annoyed) - Without hiding it behind some "I'm too tough to have emotions" persona.
+Char1 (neutral) - Hm...
+Char2 (annoyed) - Whatever...
+Char2 (annoyed) - Just... try to be more open.
+Char1 (neutral) - Fine.
+
+-- "Better than I expected." response --
+Char1 (hesitant) - It was... better than I expected.
+Char1 (hesitant) - I expected it to be really difficult and...
+Char1 (hesitant) - You know, like... something that rookies would just not wanna do.
+Char1 (hesitant) - I guess I mean to say that... I had fun.
+Char1 (neutral) - At least for the first day that is.
+Char2 (smiling) - *chuckles* At least you had fun.
+Char1 (smiling) - Yeah... at least I did.
+
+-- back to normal route --
+Char2 (smiling) - So... about what I said back at the café...
+Char2 (smiling) - Do you... wanna take up on that offer?
+Char2 (smiling) - To spend time together?
+Char2 (shy) - I mean, it would be nice right?
+Char2 (shy) - Just the two of us... and Grumpy of course.
+Char2 (shy) - You've had quite a lot of time to think...
+Char2 (smiling) - So I just wanna know your answer.
+Char1 (thought):
+ - Yes. (+True/Good ending)
+ - Sorry. (-Bad ending or ~Neutral ending) 
+*these choices get locked depending on the relationship point amount, negatives lock the good ending and positives keep the negative unlocked as an optional choice as in "I'm busy" not just "I'm a fuckin' prick"*
+
+-- "Sorry." response (if positive) --
+Char1 (neutral) - Sorry, I can't.
+Char1 (hesitant) - I have some... stuff to do.
+Char1 (tired) - And I'm... *yawn* really tired.
+Char1 (neutral) - I... hope you understand.
+Char2 (disappointed) - It's fine... I understand.
+Char2 (neutral) - Go get your rest, I'll see you on Monday.
+Char1 (neutral) - Ugh, I hate Mondays.
+Char2 (smiling) - I heard that.
+Char1 (smiling) - I know.
+-- Neutral ending --
+
+
+-- "Sorry." response (if negative) --
+
+Char1 (neutral) - Sorry, I'm just... not feeling it.
+Char1 (neutral) - I don't think it's a good idea...
+Char1 (neutral) - Especially with my attitude and all that.
+Char2 (disappointed) - *slight pause and a disappointed exhale*
+Char2 (disappointed) - Right... figured, should've seen that coming.
+Char2 (disappointed) - *huffs* Shouldn't have even offered it.
+Char2 (annoyed) - I'll see you on Monday.
+Char2 (annoyed) - If you're late again then I'm writing you up.
+Char2 (annoyed) - Just keep that in mind.
+Char1 (neutral) - Yeah, yeah, sure, whatever.
+Char2 (annoyed) - *muttering under breath* Pendejo...
+-- Bad ending --
+
+
+-- "Yes." response --
+Char1 (smiling) - Sure, I'd love to.
+Char1 (neutral) - Where to?
+Char2 (smiling) - I can lead you to the humble abode if you follow me.
+Char1 (smiling) - Alright, alright, lead me to this wonderful place you keep speaking of.
+Char2 (smiling) - With pleasure.
+Char2 (smiling) - You're gonna get along with Grumpy.
+Char2 (smiling) - I'm sure of that.
+Char1 (neutral) - What makes you so sure?
+Char2 (smiling) - Don't know, just a gut feeling.
+Char1 (neutral) - Uh-huh...
+Char2 (teasing) - Say that again and I'll find a mistletoe to tease you with-
+Char1 (shocked) - Nope nope. I swear I will keep my mouth shut, I swear!
+Char2 (teasing) - You better... cause I won't tell you if I do find one.
+Char1 (neutral) - I signed up for hell didn't I?
+Char2 (smiling) - Keep telling yourself that.
+Char2 (smiling) - By the way, if Grumpy scratches you, it's their way of showing affection.
+-- Good ending --
