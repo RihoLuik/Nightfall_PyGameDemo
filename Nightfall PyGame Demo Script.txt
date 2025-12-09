@@ -53,7 +53,7 @@ Char2 () - Alright... so two years ago, it was Vera's first patrol with me.
 
 Scene 1:
 
-Char1 (annoyed) - Fuck it's freezing... and there's no snow...
+Char1 (annoyed) - It's freezing... and there's no snow...
 Char1 (annoyed) - What kind of a Christmas week is this supposed to be?
 Char1 (thought) - Should be around the corner... I think?
 *a few minutes later*
@@ -67,10 +67,12 @@ Char1 (thought):
  - I'll do my best. (+1)
 
 -- "Let's just get this over with." response --
+Char1 (neutral) - Let's just get this over with.
 Char2 (annoyed) - Eager much to be done already?
 Char2 (annoyed) - *sigh*
 
 -- "I'll do my best." response --
+Char1 (smiling) - I'll do my best.
 Char2 (smiling) - Sure you will.
 Char2 (neutral) - But we'll see about it, Rookie.
 Char1 (neutral) - Alright...
@@ -91,11 +93,13 @@ Char1 (thought):
  - Surely it won't... wanna hear a joke? (+1)
 
 -- "Hm." response --
+Char1 (neutral) - Hm.
 Char2 (annoyed) - Not really talkative are you?
 Char2 (annoyed) - ...
 Char2 (annoyed) - Whatever.
 
 -- "Surely it won't... wanna hear a joke?" response" --
+Char1 (neutral) - Surely it won't... wanna hear a joke?
 Char2 (confused) - ...Oookay...? Sure... do your worst.
 Char1 (neutral) - Alright, um... what do you call a robber who has electricity and invisibility powers?
 Char1 (smiling) - Like, y'know, lightning and poof, I'm gone type shit?
@@ -151,7 +155,7 @@ Char2 (annoyed) - We got some interrogation to do...
 -- "Catch!" response --
 Char1 (serious) - This should cut 'em off.
 Char1 (serious) - *runs to the alternate path to cut 'em off*
-Char1 (serious) - Alright... any moment now... *takes a steady breath- holds it- body flickers, then fades from sight*
+Char1 (invisible) - Alright... any moment now... *takes a steady breath- holds it- body flickers, then fades from sight*
 Char7 () - *running through the path*
 Char7 () - Think she gave up... fuck yeah!
 Char1 (serious) - *kicks a nearby trash can over to make the second robber slip*
@@ -192,7 +196,7 @@ Char1 (thought) - Light and noble... I can see why.
 Char2 (smiling) - Light and noble? Why's that? You look into name meanings or something?
 Char1 (neutral) - Obviously, and that’s what your name means. I look into that stuff sometimes, just a habit y'know?
 Char1 (neutral) - Curiosity kills the cat... a little morbid meaning but all in all a literal thing that can happen.
-Char1 (annoyed) - I knew people like that. Friends, coworkers... idiots who poked into the wrong things.
+Char1 (annoyed) - I knew people like that. Friends, coworkers... idiots who poked their heads into wrong things.
 Char1 (annoyed) - They were idiots yes, but not everything's gonna be sunshine and rainbows...
 Char1 (neutral) - I'm sure you'd know that...
 Char2 (neutral) - You're right, I do... guess something like that is unavoidable in this line of work.
