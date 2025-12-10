@@ -6,8 +6,8 @@ class MenuAudio:
         pygame.mixer.init()
 
         # Load sounds
-        self.click = self.load_sound("assets/audio/click.ogg")
-        self.hover = self.load_sound("assets/audio/hover.ogg")
+        self.click = self.load_sound("assets/audio/sfx/click.ogg")
+        self.hover = self.load_sound("assets/audio/sfx/hover.ogg")
 
     def load_sound(self, path):
         try:

@@ -119,10 +119,10 @@ Char1 (awkward) - Heh...eh... <- awkward chuckle
 -- Back to linear route --
 Char1 (neutral) - There.
 Char1 (neutral) - Looks like something's going down... should we go and check?
-Char2 (smiling) - Good eye. *muttering*
+Char2 (smiling) - *muttering* Good eye.
 Char2 (smiling) - Let's go.
 
--- Going to the scene --
+-- Going to the scene (Scene 1.5 starts here) --
 
 Char2 (neutral) - Alright we're he-
 *two robbers appear out of nowhere from a store*
@@ -148,7 +148,7 @@ Char2 (annoyed) - Don't tell me you let 'em get away...
 Char1 (annoyed) - *panting* ...what do you think?
 Char2 (disappointed) - *sigh* alright, first day on the job, happens.
 Char2 (annoyed) - We'll find 'em later, let's just-
-Char2 (annoyed) - Ngh- stay still! Let's just get this bastard back to the presinct...
+Char2 (annoyed) - Ngh- stay still! Let's just get this bastard back to the precinct...
 Char2 (annoyed) - We got some interrogation to do...
 *cuts to an image with black background and white text "we ran out of budget for this :P" and then fades to black and then fades into the second scene*
 
@@ -162,7 +162,7 @@ Char1 (serious) - *kicks a nearby trash can over to make the second robber slip*
 Char7 () - WAITWAIT-!
 Char1 (serious) - *leaps onto the robber*
 Char1 (smiling) - GOTCHA!
-Char1 (neutral) - *realises that they knocked the robber out by accident* oops...
+Char1 (neutral) - *realizes that they knocked the robber out by accident* oops...
 Char1 (neutral) - Guess I'll just carry them back to her... *picks up the second robber*
 Char1 (neutral) - *carries the second robber over back to Ellie* Got 'em...
 Char2 (confused) - That's good... what happened to 'em?

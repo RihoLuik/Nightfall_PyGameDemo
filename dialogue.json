@@ -2,13 +2,13 @@
   "scenes": [
     {
       "id": "scene_1",
-      "background": "street_day.png",
+      "background": "assets/backgrounds/Scene1.png",
       "characters": ["player.png", "partner.png"],
       "dialogue": [
         {
           "type": "line",
           "speaker": "Player",
-          "line": "Fuck it's freezing... and there's no snow...",
+          "line": "It's freezing... and there's no snow...",
           "voice": "vera_intro1",
           "emotion": "angry"
         },
@@ -17,14 +17,14 @@
           "speaker": "Player",
           "line": "What kind of a Christmas week is this supposed to be?",
           "voice": "vera_intro2",
-          "emotion": "angry"
+          "emotion": "annoyed"
         },
         {
           "type": "line",
           "speaker": "Player",
           "line": "Ugh... should be close anyway...",
           "voice": "vera_intro3",
-          "emotion": "angry"
+          "emotion": "thought"
         },
         {
           "type": "narration",
@@ -35,36 +35,36 @@
           "type": "line",
           "speaker": "Partner",
           "line": "You're late.",
-          "voice": "ellie_intro",
-          "emotion": "angry"
+          "voice": "ellie_intro1",
+          "emotion": "annoyed"
         },
         {
           "type": "line",
           "speaker": "Partner",
           "line": "What took you so long?",
-          "voice": "ellie_intro",
-          "emotion": "angry"
+          "voice": "ellie_intro2",
+          "emotion": "annoyed"
         },
         {
           "type": "line",
           "speaker": "Partner",
           "line": "You know what? Don't answer that.",
-          "voice": "ellie_intro",
-          "emotion": "angry"
+          "voice": "ellie_intro3",
+          "emotion": "annoyed"
         },
         {
           "type": "line",
           "speaker": "Partner",
           "line": "You ready for the shift?",
-          "voice": "ellie_intro",
-          "emotion": "angry"
+          "voice": "ellie_intro4",
+          "emotion": "neutral"
         },
         {
           "type": "line",
           "speaker": "Player",
           "line": "Of course I am.",
-          "voice": "ellie_intro",
-          "emotion": "angry"
+          "voice": "vera_intro4",
+          "emotion": "neutral"
         },
         {
           "type": "choice",
@@ -76,17 +76,24 @@
               "branch": [
                 {
                   "type": "line",
+                  "speaker": "Player",
+                  "line": "Let's just get this over with.",
+                  "voice": "vera_bad1",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
                   "speaker": "Partner",
                   "line": "Eager much to be done already?",
-                  "voice": "ellie_react1",
-                  "emotion": "angry"
+                  "voice": "ellie_bad1",
+                  "emotion": "annoyed"
                 },
                 {
                   "type": "line",
                   "speaker": "Partner",
                   "line": "*sigh*",
-                  "voice": "ellie_react2",
-                  "emotion": "angry"
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
                 }
               ]
             },
@@ -96,24 +103,31 @@
               "branch": [
                 {
                   "type": "line",
+                  "speaker": "Player",
+                  "line": "I'll do my best.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
                   "speaker": "Partner",
                   "line": "Sure you will.",
-                  "voice": "ellie_react3",
-                  "emotion": "angry"
+                  "voice": "ellie_good1",
+                  "emotion": "smiling"
                 },
                 {
                   "type": "line",
                   "speaker": "Partner",
                   "line": "But we'll see about it, Rookie.",
-                  "voice": "ellie_react4",
-                  "emotion": "angry"
+                  "voice": "ellie_good2",
+                  "emotion": "neutral"
                 },
                 {
                   "type": "line",
                   "speaker": "Player",
                   "line": "Alright...",
-                  "voice": "player_ack1",
-                  "emotion": "angry"
+                  "voice": "vera_good2",
+                  "emotion": "neutral"
                 }
               ]
             }
@@ -123,22 +137,524 @@
           "type": "line",
           "speaker": "Partner",
           "line": "Come on, we're burning daylight here.",
-          "voice": "ellie_continue1",
-          "emotion": "angry"
+          "voice": "ellie_s1l1",
+          "emotion": "neutral"
         },
         {
           "type": "line",
           "speaker": "Player",
           "line": "I'm coming, I'm coming!",
-          "voice": "player_hurry1",
-          "emotion": "angry"
+          "voice": "vera_s1l1",
+          "emotion": "neutral"
         },
         {
           "type": "line",
           "speaker": "Partner",
           "line": "Good, let's check that street over there.",
-          "voice": "ellie_continue2",
+          "voice": "ellie_s1l2",
+          "emotion": "neutral"
+        },
+        {
+          "type": "narration",
+          "line": "Patrolling on street...",
+          "voice": "footsteps1"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "See anything?",
+          "voice": "ellie_s1l3",
+          "emotion": "neutral"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "Nope... nothing yet.",
+          "voice": "vera_s1l2",
+          "emotion": "neutral"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "I swear if this is gonna be a nothing patrol...",
+          "voice": "ellie_s1l4",
+          "emotion": "neutral"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "Rather not spend time in this blistering cold...",
+          "voice": "ellie_s1l5",
+          "emotion": "annoyed"
+        },
+        {
+          "type": "choice",
+          "timer": 6,
+          "choices": [
+            {
+              "text": "Hm.",
+              "points": -1,
+              "branch": [
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Hm.",
+                  "voice": "vera_hm1",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Not really talkative are you?",
+                  "voice": "ellie_hm1",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "...Whatever.",
+                  "voice": "ellie_hm2",
+                  "emotion": "annoyed"
+                }
+              ]
+            },
+            {
+              "text": "Surely it won't... wanna hear a joke?",
+              "points": 1,
+              "branch": [
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Surely it won't... wanna hear a joke?",
+                  "voice": "vera_joke1",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "...Oookay...? Sure... do your worst.",
+                  "voice": "ellie_joke1",
+                  "emotion": "confused"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Alright, um... what do you call a robbert who has electricity and invisibility powers?",
+                  "voice": "vera_joke2",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Like, y'know, lightning and poof, I'm gone type shit?",
+                  "voice": "vera_joke3",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Right...",
+                  "voice": "ellie_joke2",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "First off, watch your language, and second, what do you call them?",
+                  "voice": "ellie_joke3",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "A Vishocker... I-I mean... a Vishobber",
+                  "voice": "vera_joke4",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Wait- no, that sounds like a vacuum cleaner brand...",
+                  "voice": "vera_joke5",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "...It sounded a lot cooler in my head.",
+                  "voice": "vera_joke6",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "That's just terrible.",
+                  "voice": "ellie_joke4",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "*muttering* yeah... used to sound cooler.",
+                  "voice": "vera_joke7",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "What?",
+                  "voice": "ellie_joke5",
+                  "emotion": "confused"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Nothing.",
+                  "voice": "vera_joke8",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Okaay...? Well...that is... one of the worst jokes I've heard in at least five years.",
+                  "voice": "ellie_joke6",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "...But points for trying, I guess.",
+                  "voice": "ellie_joke7",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Heh...eh...",
+                  "voice": "vera_joke9",
+                  "emotion": "awkward"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "There.",
+          "voice": "vera_s1l3",
+          "emotion": "neutral"
+        },
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "Looks like something's going down... should we go and check?",
+          "voice": "vera_s1l4",
+          "emotion": "neutral"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "*muttering* Good eye.",
+          "voice": "ellie_s1l6",
+          "emotion": "smiling"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "Let's go.",
+          "voice": "ellie_s1l7",
+          "emotion": "smiling"
+        }
+      ]
+    },
+    {
+      "id": "scene_1.5",
+      "background": "assets/backgrounds/Scene1,5.png",
+      "characters": ["player.png", "partner.png"],
+      "dialogue": [
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "Alright we're he-",
+          "voice": "ellie_s1.5l1",
           "emotion": "angry"
+        },
+        {
+          "type": "narration",
+          "line": "Two robbers appear out of nowhere from a store",
+          "voice": "glass_shatter"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "Christ!",
+          "voice": "vera_intro3",
+          "emotion": "thought"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "GET BACK HERE!",
+          "voice": "ellie_intro1",
+          "emotion": "annoyed"
+        },
+        {
+          "type": "narration",
+          "command": "hide", "target": "Partner",
+          "line": "Player goes after the second one",
+          "voice": "footsteps1"
+        },
+        {
+          "type": "line",
+          "speaker": "Partner",
+          "line": "GET BACK HERE!",
+          "voice": "ellie_intro4",
+          "emotion": "neutral"
+        },
+        {
+          "type": "line",
+          "speaker": "Player",
+          "line": "Ugh... fuck...",
+          "voice": "vera_intro4",
+          "emotion": "neutral"
+        },
+        {
+          "type": "narration",
+          "line": "Player looks around: two routes, two choices: keep chasing or cut them off",
+          "voice": "footsteps1"
+        },
+        {
+          "type": "choice",
+          "timer": 6,
+          "choices": [
+            {
+              "text": "Don't catch.",
+              "points": -1,
+              "branch": [
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Fuck it.",
+                  "voice": "vera_bad1",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "narration",
+                  "line": "Player continues running after 'em but fails to catch 'em",
+                  "voice": "footsteps1"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "SHIT!",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "I should've been faster...",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "narration",
+                  "line": "Partner approaches from behind with the first robber",
+                  "voice": "footsteps1"
+                },
+                {
+                  "type": "line",
+                  "command": "show", "target": "Partner",
+                  "speaker": "Partner",
+                  "line": "Where's the second one?",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Don't tell me you let 'em get away...",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "*panting* ...what do you think?",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "*sigh* alright, first day on the job, happens.",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "We'll find 'em later, let's just-",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Ngh- stay still! Let's just get this bastard back to the precinct...",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "We got some interrogation to do...",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                }
+              ]
+            },
+            {
+              "text": "Catch!",
+              "points": 1,
+              "branch": [
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "This should cut 'em off.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "narration",
+                  "line": "Player runs to the alternate path to cut 'em off",
+                  "voice": "footsteps1"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Alright... any moment now... *takes a steady breath- holds it- body flickers, then fades from sight*",
+                  "voice": "ellie_good2",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "narration",
+                  "line": "2nd robber runs through the path",
+                  "voice": "footsteps1"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Robber2",
+                  "line": "Think she gave up... fuck yeah!",
+                  "voice": "vera_good2",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "narration",
+                  "line": "Player kicks a nearby trash can over to make 'em slip",
+                  "voice": "footsteps1"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Robber2",
+                  "line": "WAITWAIT-!",
+                  "voice": "vera_good2",
+                  "emotion": "neutral"
+                },
+                {
+                  "type": "narration",
+                  "line": "Player leaps onto the robber",
+                  "voice": "footsteps1"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "GOTCHA!",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "oops...",
+                  "voice": "ellie_bad2",
+                  "emotion": "annoyed"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Guess I'll just carry them back to her... *picks up the second robber*",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Got 'em...",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "command": "show", "target": "Partner",
+                  "speaker": "Partner",
+                  "line": "That's good... what happened to 'em?",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "They uh... they ran into a wall. Yeah. A wall.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Okay...? Well, let's bring 'em to the precinct.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "It's break time soon anyway.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "Oh, right, okay.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "You okay? You're breathing heavily.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Player",
+                  "line": "I'll be fine, just ran a bit faster than I'm used to.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                },
+                {
+                  "type": "line",
+                  "speaker": "Partner",
+                  "line": "Alright.",
+                  "voice": "vera_good1",
+                  "emotion": "smiling"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
