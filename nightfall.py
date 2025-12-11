@@ -1,34 +1,59 @@
 import pygame
+from resources import load_characters
 from classes import GameManager, Scene, AudioManager, RelationshipTracker
 
+# List of scenes and their backgrounds
+scene_list = [
+    ("scene1", "assets/backgrounds/scene1.png", "assets/music/scene1_theme.ogg"),
+    ("scene1_5", "assets/backgrounds/scene1_5.png", "assets/music/scene1_5_theme.ogg"),
+    ("scene2", "assets/backgrounds/scene2.png", "assets/music/scene2_theme.ogg"),
+    ("scene2_5", "assets/backgrounds/scene2_5.png", "assets/music/scene2_5_theme.ogg"),
+    ("scene3", "assets/backgrounds/scene3.png", "assets/music/scene3_theme.ogg"),
+    ("scene_neutral", "assets/backgrounds/scene3.png", "assets/music/neutral_end.ogg"),
+    ("scene_good", "assets/backgrounds/scene3.png", "assets/music/good_end.ogg"),
+    ("scene_bad", "assets/backgrounds/scene3.png", "assets/music/bad_end.ogg")
+]
 
-def run_game(new_game=True):
-    """
-    Skeleton function for running the game.
-    Currently, does not start playable content.
-    """
-    screen = pygame.display.get_surface()  # will be set up by menu
-    if screen is None:
-        # Safety check: if not initialized, just create a basic screen
-        screen = pygame.display.set_mode((1280, 720))
-
+def run_game():
+    pygame.init()
+    screen = pygame.display.set_mode((1280, 720))
     clock = pygame.time.Clock()
     font = pygame.font.SysFont("Arial", 28)
 
-    # Setup managers (ready to integrate later)
-    audio_manager = AudioManager("assets/audio")  # will require real folder later
+    # Preload audio manager
+    audio_manager = AudioManager("assets/audio")
     relationship_tracker = RelationshipTracker()
 
-    # Scenes list empty for now
+    # Preload characters once
+    raw_characters = load_characters("assets/characters/characters.json")
+
+    # Convert all paths to pygame.Surface if not already
+    characters = {}
+    for name, emotions in raw_characters.items():
+        characters[name] = {}
+        for emo, val in emotions.items():
+            if isinstance(val, str):  # file path
+                try:
+                    characters[name][emo] = pygame.image.load(val).convert_alpha()
+                except Exception as e:
+                    print(f"Failed to load {val}: {e}")
+                    characters[name][emo] = None
+            elif isinstance(val, pygame.Surface):
+                characters[name][emo] = val
+            else:
+                characters[name][emo] = None
+
+    # Preload all scenes
     scenes = []
+    for scene_name, bg_path in scene_list:
+        dialogue_path = f"assets/dialogue/{scene_name}.json"
+        scene = Scene(bg_path, dialogue_path, characters)
+        scenes.append(scene)
 
-    # Placeholder GameManager (won't actually update anything yet)
-    if scenes:
-        game_manager = GameManager(screen, scenes, audio_manager, font)
-    else:
-        game_manager = None
+    # Setup GameManager
+    game_manager = GameManager(screen, scenes, audio_manager, font, relationship_tracker)
 
-    # Main loop placeholder
+    # Main loop
     running = True
     while running:
         dt = clock.tick(60) / 1000
@@ -36,15 +61,11 @@ def run_game(new_game=True):
             if event.type == pygame.QUIT:
                 running = False
             else:
-                if game_manager:
-                    game_manager.handle_event(event)
+                game_manager.handle_event(event)
 
-        if game_manager:
-            game_manager.update(dt)
-
+        game_manager.update(dt)
         screen.fill((0, 0, 0))
-        if game_manager:
-            game_manager.draw()
+        game_manager.draw()
         pygame.display.flip()
 
     pygame.quit()

@@ -1,0 +1,175 @@
+{
+  "id": "scene_3",
+  "dialogue": [
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "So, how was your first day rookie?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "It was good right? I mean, I had a good enough time.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "At least considering how these patrol days usually go...",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "choice", "timer": 5,
+      "choices": [
+        {
+          "text": "It was fine.", "points": -1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "It was fine... I don't really... expect much from people or really anything in that matter...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Just fine? Really?",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Yeah. Just fine. I don't think I have to repeat myself.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "You know, sometimes you're really hard to read, you know that?",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "And it's still the first day.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Just... be honest for once.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Without hiding it behind some 'I'm too tough to have emotions' persona.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Hm...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Whatever...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Just... try to be more open.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Fine.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            }
+          ]
+        },
+        {
+          "text": "Better than I expected.", "points": 1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "It was... better than I expected.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "I expected it to be really difficult and...",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "You know, like... something that rookies would just not wanna do.",
+              "voice": "ellie_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "I guess I mean to say that... I had fun.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "At least for the first day that is.",
+              "voice": "vera_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "*chuckles* At least you had fun.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "Yeah... at least I did.",
+              "voice": "vera_good2", "emotion": "neutral"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "So... about what I said back at the café...",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Do you... wanna take up on that offer?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "To spend time together?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I mean, it would be nice right?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Just the two of us... and Grumpy of course.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "You've had quite a lot of time to think...",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "So I just wanna know your answer.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Yes.",
+          "target": "scene_good",
+          "lock_condition": "relationship < 0"
+        },
+        {
+          "text": "Sorry.",
+          "target_positive": "scene_neutral",
+          "target_negative": "scene_bad"
+        }
+      ]
+    }
+  ]
+}

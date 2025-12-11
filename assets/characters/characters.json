@@ -1,0 +1,32 @@
+{
+    "Player": {
+      "neutral": "assets/characters/vera/neutral.png",
+      "smiling": "assets/characters/vera/smiling.png",
+      "annoyed": "assets/characters/vera/annoyed.png",
+      "thought": "assets/characters/vera/thought.png",
+      "awkward": "assets/characters/vera/awkward.png",
+      "serious": "assets/characters/vera/serious.png",
+      "nervous": "assets/characters/vera/nervous.png",
+      "sad": "assets/characters/vera/sad.png",
+      "shy": "assets/characters/vera/shy.png",
+      "confused": "assets/characters/vera/confused.png",
+      "hesitant": "assets/characters/vera/hesitant.png",
+      "tired": "assets/characters/vera/tired.png",
+      "shocked": "assets/characters/vera/shocked.png"
+    },
+    "Partner": {
+      "neutral": "assets/characters/ellie/neutral.png",
+      "smiling": "assets/characters/ellie/smiling.png",
+      "annoyed": "assets/characters/ellie/annoyed.png",
+      "teasing": "assets/characters/ellie/teasing.png",
+      "disappointed": "assets/characters/ellie/disappointed.png",
+      "shy": "assets/characters/ellie/shy.png",
+      "curious": "assets/characters/ellie/curious.png",
+      "confused": "assets/characters/ellie/confused.png",
+      "sad": "assets/characters/ellie/sad.png",
+      "flustered": "assets/characters/ellie/flustered.png",
+      "concerned": "assets/characters/ellie/concerned.png",
+      "serious": "assets/characters/ellie/serious.png",
+      "shocked": "assets/characters/ellie/shocked.png"
+    }
+}

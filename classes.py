@@ -29,7 +29,9 @@ class AudioManager:
                         print(f"Failed to load sound '{full_path}': {e}")
 
     def play(self, name):
-        sound = self.sounds.get(name)
+        # Strip extension and "assets/audio/" if present
+        key = name.replace("assets/audio/", "").rsplit(".", 1)[0].replace("\\", "/")
+        sound = self.sounds.get(key)
         if sound:
             sound.play()
         else:
@@ -91,28 +93,23 @@ class ChoiceTimer:
 # Scene
 # -----------------------
 class Scene:
-    # Loads scene backgrounds, character sprites, and dialogue JSON
-    def __init__(self, background, characters_dict, dialogue_file):
+    """
+        Loads scene background, references preloaded character sprites,
+        and loads a single scene JSON file.
+    """
+    def __init__(self, background_path, dialogue_file, preloaded_characters, background_music=None):
         """
-        characters_dict example:
-        {
-            "Partner": {"neutral": "partner/neutral.png", "angry": "partner/angry.png"},
-            "Player": {"neutral": "player/neutral.png", "determined": "player/determined.png"}
-        }
+            preloaded_characters: dict of char_name -> dict of emotion -> Surface
         """
-        self.background = pygame.image.load(background).convert()
-        self.characters = {}
-
-        for char_name, sprites in characters_dict.items():
-            self.characters[char_name] = {}
-            for emotion, path in sprites.items():
-                self.characters[char_name][emotion] = pygame.image.load(path).convert_alpha()
+        self.background = pygame.image.load(background_path).convert()
+        self.characters = preloaded_characters
 
         with open(dialogue_file, "r", encoding="utf-8") as f:
-            import json
             data = json.load(f)
-            scene_key = list(data.keys())[0]
-            self.dialogue = data[scene_key]
+
+        self.id = data.get("id")
+        self.dialogue = data.get("dialogue", [])
+        self.background_music = background_music  # path to music file (optional)
 
 # -----------------------
 # Dialogue System
@@ -157,6 +154,9 @@ class DialogueSystem:
 
         # Visibility / rendering state for characters (init lazily)
         self.visible_characters = None  # dict: name -> bool
+
+        self.image_screen_active = False
+        self.image_screen_surface = None
 
     def check_name_reveal(self, line_data):
         """
@@ -211,8 +211,44 @@ class DialogueSystem:
             self.selected_choice = None
             return line_data
 
+        elif line_type == "image_screen":
+            # Activate image screen
+            self.image_screen_active = True
+            image_path = line_data.get("image")
+            if image_path:
+                try:
+                    self.image_screen_surface = pygame.image.load(image_path).convert_alpha()
+                except Exception:
+                    self.image_screen_surface = None
+            self.waiting = True
+            return line_data
+
         # For unknown types (including possible 'command' entries), just return it
         return line_data
+
+    def draw_wrapped_text(self, screen, text, x, y, max_width, color=None):
+        if color is None:
+            color = self.color
+
+        words = text.split(" ")
+        lines = []
+        current = ""
+
+        for w in words:
+            test = current + w + " "
+            if self.font.size(test)[0] <= max_width:
+                current = test
+            else:
+                lines.append(current)
+                current = w + " "
+        if current:
+            lines.append(current)
+
+        # Draw each wrapped line
+        for line in lines:
+            surf = self.font.render(line, True, color)
+            screen.blit(surf, (x, y))
+            y += self.font.get_linesize()
 
     def update(self, dt):
         """
@@ -249,6 +285,11 @@ class DialogueSystem:
                 self.index += 1
                 return self.start_line()
 
+        # Image screen handling
+        if line_type == "image_screen" and self.image_screen_active:
+            # Just wait for click to advance (handled in click()) or auto advance if you want
+            return None
+
         return None
 
     # Call when player clicks a choice button.
@@ -268,20 +309,45 @@ class DialogueSystem:
     def apply_choice(self, choice_index):
         """Apply points and insert branch lines (if any)."""
         choices = self.current_line.get("choices", [])
-        if choice_index < len(choices):
-            choice = choices[choice_index]
-            points = choice.get("points", 0)
-            if self.relationship:
-                self.relationship.add(points)
+        if choice_index >= len(choices):
+            return
 
-            # If there's a branch (list of lines), insert them right after current index
-            branch = choice.get("branch")
-            if branch and isinstance(branch, list):
-                insert_pos = self.index + 1
-                # Make a shallow copy to avoid mutating original data unintentionally
-                for i, entry in enumerate(branch):
-                    # Insert in original order
-                    self.dialogue_lines.insert(insert_pos + i, entry)
+        choice = choices[choice_index]
+        points = choice.get("points", 0)
+
+        if self.relationship:
+            self.relationship.add(points)
+
+        rel_value = self.relationship.get() if self.relationship else 0
+
+        # Branch selection
+        if "target" in choice:
+            # simple jump (good ending)
+            self.insert_scene_jump(choice["target"])
+            return
+
+        # Positive/negative branching for "Sorry."
+        if "target_positive" in choice and "target_negative" in choice:
+            if rel_value >= 0:
+                self.insert_scene_jump(choice["target_positive"])
+            else:
+                self.insert_scene_jump(choice["target_negative"])
+            return
+
+        # Old branch insertion
+        branch = choice.get("branch")
+        if branch and isinstance(branch, list):
+            insert_pos = self.index + 1
+            # Make a shallow copy to avoid mutating original data unintentionally
+            for i, entry in enumerate(branch):
+                # Insert in original order
+                self.dialogue_lines.insert(insert_pos + i, entry)
+
+    def insert_scene_jump(self, scene_id):
+        self.dialogue_lines.insert(self.index + 1, {
+            "type": "scene_jump",
+            "target": scene_id
+        })
 
     # Drawing & rendering
     def draw(self, screen, scene):
@@ -292,13 +358,22 @@ class DialogueSystem:
         if not self.current_line:
             return
 
-        # Lazy init of visible_characters from scene
+        # Init of visible_characters from scene
         if self.visible_characters is None:
             self.visible_characters = {}
             # mark all characters present in the scene as visible by default
             if hasattr(scene, "characters") and isinstance(scene.characters, dict):
                 for name in scene.characters.keys():
                     self.visible_characters[name] = True
+
+        # Image screen rendering
+        if self.image_screen_active:
+            if self.image_screen_surface:
+                sw, sh = screen.get_size()
+                img = self.image_screen_surface
+                iw, ih = img.get_size()
+                screen.blit(img, ((sw - iw) // 2, (sh - ih) // 2))
+            return  # don't draw anything else while image screen is active
 
         # If this line is a simple command (hide/show), process it now, using the scene context
         if "command" in self.current_line:
@@ -324,59 +399,46 @@ class DialogueSystem:
         # Multi-character rendering
         # Draw all visible characters (Partner = left, Player = right)
         # Uses dims for inactive speaker and full alpha for active speaker.
-        left_name = "Partner" # Ellie
-        right_name = "Player" # Vera
+        # Determine left/right names for multi-character rendering
+        left_name = "Partner"  # e.g. Ellie
+        right_name = "Player"  # e.g. Vera
 
-        # Helper to fetch sprite for a character + emotion (safe)
-        def _get_sprite_for(name, emotion_key="neutral"):
-            if not hasattr(scene, "characters") or not isinstance(scene.characters, dict):
-                return None
+        # Helper function: safely get a Surface for a character + emotion
+        def _get_sprite(name, emotion_key="neutral"):
             if name not in scene.characters:
                 return None
-            sprite_dict = scene.characters[name]
-            # sprite_dict expected to be dict of emotion -> Surface OR single Surface for fallback
-            if isinstance(sprite_dict, dict):
-                sprite = sprite_dict.get(emotion_key, sprite_dict.get("neutral"))
-            else:
-                # if user used older format (simple path or Surface), try neutral fallback
-                sprite = sprite_dict
-            return sprite
+            char_data = scene.characters[name]
+            if isinstance(char_data, dict):
+                return char_data.get(emotion_key, char_data.get("neutral"))
+            return char_data  # fallback if Surface directly stored
 
-        # Determine active speaker (for highlighting)
+        # Determine active speaker for dimming
         active_speaker = None
         if speaker and self.visible_characters.get(speaker, False):
             active_speaker = speaker
 
-        # Draw left character (Partner) if present and visible
-        left_sprite = _get_sprite_for(left_name, emotion if speaker == left_name else "neutral")
+        # Draw left character if visible
+        left_sprite = _get_sprite(left_name, emotion if speaker == left_name else "neutral")
         if left_sprite and self.visible_characters.get(left_name, True):
             try:
-                # compute left position (fixed)
-                left_x = 100
-                left_y = 200
-                # determine alpha
                 alpha_val = 255 if active_speaker == left_name else 120
                 sprite_to_draw = left_sprite.copy()
-                # if sprite has per-pixel alpha, set_alpha still works on the copy
                 sprite_to_draw.set_alpha(alpha_val)
-                screen.blit(sprite_to_draw, (left_x, left_y))
+                screen.blit(sprite_to_draw, (100, 200))
             except Exception:
-                # fallback: blit original without alpha changes
                 screen.blit(left_sprite, (100, 200))
 
-        # Draw right character (Player) if present and visible
-        right_sprite = _get_sprite_for(right_name, emotion if speaker == right_name else "neutral")
+        # Draw right character if visible
+        right_sprite = _get_sprite(right_name, emotion if speaker == right_name else "neutral")
         if right_sprite and self.visible_characters.get(right_name, True):
             try:
-                # compute right position based on screen width and sprite width
                 sw = screen.get_width()
                 sprite_w = right_sprite.get_width()
-                right_x = max( sw - sprite_w - 100, 300 )  # ensure not too far left
-                right_y = 200
+                right_x = max(sw - sprite_w - 100, 300)
                 alpha_val = 255 if active_speaker == right_name else 120
                 sprite_to_draw = right_sprite.copy()
                 sprite_to_draw.set_alpha(alpha_val)
-                screen.blit(sprite_to_draw, (right_x, right_y))
+                screen.blit(sprite_to_draw, (right_x, 200))
             except Exception:
                 screen.blit(right_sprite, (sw - sprite_w - 100, 200))
 
@@ -387,13 +449,20 @@ class DialogueSystem:
             # Speaker name
             if speaker:
                 display_name = self.name_map.get(speaker, speaker)
+                # Draw speaker name slightly above dialogue text
                 name_surf = self.font.render(f"{display_name}:", True, self.color)
-                screen.blit(name_surf, (self.pos[0], y_offset - 30))
+                name_y = y_offset - self.font.get_linesize() - 5
+                screen.blit(name_surf, (self.pos[0], name_y))
 
-            # Dialogue / narration text
-            for i, line in enumerate(text.split("\n")):
-                surf = self.font.render(line, True, self.color)
-                screen.blit(surf, (self.pos[0], y_offset + i * self.font.get_height()))
+            # Draw wrapped dialogue text
+            max_width = screen.get_width() - self.pos[0] - 40
+            self.draw_wrapped_text(
+                screen,
+                text,
+                self.pos[0],
+                y_offset,
+                max_width
+            )
 
         # Draw choices
         elif line_type == "choice":
@@ -407,6 +476,24 @@ class DialogueSystem:
                 timer_text = f"Time left: {int(self.choice_timer.get_remaining())}s"
                 timer_surf = self.font.render(timer_text, True, self.color)
                 screen.blit(timer_surf, (self.pos[0], y_offset - 40))
+
+        elif line_type == "choice":
+            choices = self.current_line.get("choices", [])
+            rel_value = self.relationship.get() if self.relationship else 0
+
+            for i, choice in enumerate(choices):
+                locked = False
+
+                # Check lock condition (e.g. "relationship < 0")
+                condition = choice.get("lock_condition")
+                if condition:
+                    locked = self.evaluate_condition(condition, rel_value)
+
+                prefix = "X " if locked else "> " if i == getattr(self, "selected_choice", -1) else ""
+                color = (150, 150, 150) if locked else self.color
+
+                surf = self.font.render(f"{prefix}{choice['text']}", True, color)
+                screen.blit(surf, (self.pos[0], y_offset + i * self.font.get_height() * 1.5))
 
     # Click handling
     def handle_click(self, mouse_pos):
@@ -423,11 +510,22 @@ class DialogueSystem:
         mouse_x, mouse_y = mouse_pos
 
         choices = self.current_line.get("choices", [])
-        for i, _ in enumerate(choices):
+        rel_value = self.relationship.get() if self.relationship else 0
+
+        for i, choice in enumerate(choices):
             choice_y_top = y_start + i * choice_height
             choice_y_bottom = choice_y_top + choice_height
             if choice_y_top <= mouse_y <= choice_y_bottom:
-                # Clicked this choice
+
+                # Check lock condition
+                locked = False
+                condition = choice.get("lock_condition")
+                if condition:
+                    locked = self.evaluate_condition(condition, rel_value)
+
+                if locked:
+                    return None  # do nothing if locked
+
                 return self.click_choice(i)
         return None
 
@@ -441,6 +539,11 @@ class DialogueSystem:
             return None
 
         line_type = self.current_line.get("type", "line")
+        if self.image_screen_active:
+            self.image_screen_active = False
+            self.image_screen_surface = None
+            self.index += 1
+            return self.start_line()
 
         if line_type == "choice" and mouse_pos is not None:
             # delegate to choice click handler
@@ -450,16 +553,25 @@ class DialogueSystem:
             self.index += 1
             return self.start_line()
 
+    def evaluate_condition(self, condition, rel):
+        condition = condition.replace("relationship", str(rel))
+
+        try:
+            return eval(condition)
+        except:
+            return False
+
 # -----------------------
 # Game Manager
 # -----------------------
 class GameManager:
     # Manages scenes, dialogue progression, and drawing
-    def __init__(self, screen, scenes, audio_manager, font):
+    def __init__(self, screen, scenes, audio_manager, font, relationship_tracker):
         self.screen = screen
         self.scenes = scenes
         self.audio = audio_manager
         self.font = font
+        self.relationship_tracker = relationship_tracker
 
         self.current_scene_index = 0
         self.current_scene = scenes[0]
@@ -472,6 +584,19 @@ class GameManager:
 
         self.current_line = self.dialogue_system.start_line()
         self.active = True
+
+        self.current_music = None
+
+    def play_scene_music(self):
+        scene = self.current_scene
+        if scene.background_music and scene.background_music != self.current_music:
+            try:
+                pygame.mixer.music.load(scene.background_music)
+                pygame.mixer.music.set_volume(0.5)
+                pygame.mixer.music.play(-1)  # loop
+                self.current_music = scene.background_music
+            except Exception as e:
+                print(f"Failed to load music '{scene.background_music}': {e}")
 
     def update(self, dt):
         if not self.active:
@@ -487,17 +612,11 @@ class GameManager:
     def draw(self):
         scene = self.current_scene
 
-        # background
+        # draw background
         self.screen.blit(scene.background, (0, 0))
 
-        # characters
-        x = 100
-        for ch in scene.characters:
-            self.screen.blit(ch, (x, 200))
-            x += ch.get_width() + 40
-
-        # dialogue
-        self.dialogue_system.draw(self.screen)
+        # let DialogueSystem handle characters, text, and choices
+        self.dialogue_system.draw(self.screen, scene)
 
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
@@ -507,7 +626,6 @@ class GameManager:
 
     def next_scene(self):
         self.current_scene_index += 1
-
         if self.current_scene_index >= len(self.scenes):
             self.active = False
             return
@@ -519,3 +637,23 @@ class GameManager:
             self.font
         )
         self.current_line = self.dialogue_system.start_line()
+        self.play_scene_music()  # <-- music changes with scene
+
+    def start_next_scene(self):
+        """
+        Chooses which scene to load based on relationship points.
+        """
+        current_id = self.current_scene.id
+
+        if current_id == "scene_2":
+            # Branching logic here
+            if self.relationship_tracker.points > 0:
+                self.load_scene("scene_2.5")
+            else:
+                self.load_scene("scene_3")
+            return
+
+        # Default linear progression
+        next_scene_id = self.current_scene.next_scene
+        if next_scene_id:
+            self.load_scene(next_scene_id)

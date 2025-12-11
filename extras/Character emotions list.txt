@@ -1,0 +1,30 @@
+Vera's emotions:
+neutral,
+smiling,
+annoyed,
+thought,
+awkward,
+serious,
+nervous,
+sad,
+shy,
+confused,
+hesitant,
+tired,
+shocked
+
+
+Ellie's emotions:
+neutral,
+smiling,
+annoyed,
+teasing,
+disappointed,
+shy,
+curious,
+confused,
+sad,
+flustered,
+concerned,
+serious,
+shocked

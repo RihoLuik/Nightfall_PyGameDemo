@@ -1,0 +1,64 @@
+{
+  "id": "scene_bad",
+  "dialogue": [
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Sorry, I'm just... not feeling it.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I don't think it's a good idea...",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Especially with my attitude and all that.",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "*slight pause and a disappointed exhale*",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Right... figured, should've seen that coming.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "*huffs* Shouldn't have even offered it.",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I'll see you on Monday.",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "If you're late again then I'm writing you up.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Just keep that in mind.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Yeah, yeah, sure, whatever.",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "*muttering under breath* Pendejo...",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "image_screen",
+      "image": "assets/images/badend.png"
+    }
+  ]
+}

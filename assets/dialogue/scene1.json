@@ -1,0 +1,270 @@
+{
+  "id": "scene_1",
+  "dialogue": [
+    {
+      "type": "line", "speaker": "Player",
+      "line": "It's freezing... and there's no snow...",
+      "voice": "assets/audio/vera/intro/line1", "emotion": "annoyed"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "What kind of a Christmas week is this supposed to be?",
+      "voice": "assets/audio/vera/intro/line2", "emotion": "annoyed"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Ugh... should be close anyway...",
+      "voice": "assets/audio/vera/intro/line3", "emotion": "thought"
+    },
+    {
+      "type": "narration",
+      "line": "A few minutes later...",
+      "voice": "footsteps1"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "You're late.",
+      "voice": "assets/audio/ellie/intro/line1", "emotion": "annoyed"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "What took you so long?",
+      "voice": "assets/audio/ellie/intro/line2", "emotion": "annoyed"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "You know what? Don't answer that.",
+      "voice": "assets/audio/ellie/intro/line3", "emotion": "annoyed"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "You ready for the shift?",
+      "voice": "assets/audio/ellie/intro/line4", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Of course I am.",
+      "voice": "assets/audio/vera/s1/line1", "emotion": "neutral"
+    },
+    {
+      "type": "choice", "timer": 5,
+      "choices": [
+        {
+          "text": "Let's just get this over with.", "points": -1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Let's just get this over with.",
+              "voice": "assets/audio/vera/s1/bad1", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Eager much to be done already?",
+              "voice": "assets/audio/ellie/s1/bad1", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "*sigh*",
+              "voice": "assets/audio/ellie/s1/bad2", "emotion": "annoyed"
+            }
+          ]
+        },
+        {
+          "text": "I'll do my best.", "points": 1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "I'll do my best.",
+              "voice": "assets/audio/vera/s1/good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Sure you will.",
+              "voice": "assets/audio/ellie/s1/good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "But we'll see about it, Rookie.",
+              "voice": "assets/audio/ellie/s1/good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Alright...",
+              "voice": "assets/audio/vera/s1/good2", "emotion": "neutral"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Come on, we're burning daylight here.",
+      "voice": "assets/audio/ellie/s1/line1", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "I'm coming, I'm coming!",
+      "voice": "assets/audio/vera/s1/line2", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Good, let's check that street over there.",
+      "voice": "assets/audio/ellie/s1/line2", "emotion": "neutral"
+    },
+    {
+      "type": "narration",
+      "line": "Patrolling on street...",
+      "voice": "footsteps1"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "See anything?",
+      "voice": "assets/audio/ellie/s1/line3", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Nope... nothing yet.",
+      "voice": "assets/audio/vera/s1/line3", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I swear if this is gonna be a nothing patrol...",
+      "voice": "assets/audio/ellie/s1/line4", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Rather not spend time in this blistering cold...",
+      "voice": "assets/audio/ellie/s1/line5", "emotion": "annoyed"
+    },
+    {
+      "type": "choice", "timer": 5,
+      "choices": [
+        {
+          "text": "Hm.", "points": -1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Hm.",
+              "voice": "assets/audio/vera/s1/hm1", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Not really talkative are you?",
+              "voice": "assets/audio/ellie/s1/hm1", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "...Whatever.",
+              "voice": "assets/audio/ellie/s1/hm2", "emotion": "annoyed"
+            }
+          ]
+        },
+        {
+          "text": "Surely it won't... wanna hear a joke?", "points": 1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Surely it won't... wanna hear a joke?",
+              "voice": "assets/audio/vera/s1/joke1", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "...Oookay...? Sure... do your worst.",
+              "voice": "assets/audio/ellie/s1/joke1", "emotion": "confused"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Alright, um... what do you call a robbert who has electricity and invisibility powers?",
+              "voice": "assets/audio/vera/s1/joke2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Like, y'know, lightning and poof, I'm gone type shit?",
+              "voice": "assets/audio/vera/s1/joke3", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Right...",
+              "voice": "assets/audio/ellie/s1/joke2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "First off, watch your language, and second, what do you call them?",
+              "voice": "assets/audio/ellie/s1/joke3", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "A Vishocker... I-I mean... a Vishobber",
+              "voice": "assets/audio/vera/s1/joke4", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Wait- no, that sounds like a vacuum cleaner brand...",
+              "voice": "assets/audio/vera/s1/joke5", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "...It sounded a lot cooler in my head.",
+              "voice": "assets/audio/vera/s1/joke6", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "That's just terrible.",
+              "voice": "assets/audio/ellie/s1/joke4", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "*muttering* yeah... used to sound cooler.",
+              "voice": "assets/audio/vera/s1/joke7", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "What?",
+              "voice": "assets/audio/ellie/s1/joke5", "emotion": "confused"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Nothing.",
+              "voice": "assets/audio/vera/s1/joke8", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Okaay...? Well...that is... one of the worst jokes I've heard in at least five years.",
+              "voice": "assets/audio/ellie/s1/joke6", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "...But points for trying, I guess.",
+              "voice": "assets/audio/ellie/s1/joke7", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Heh...eh...",
+              "voice": "assets/audio/vera/s1/joke9", "emotion": "awkward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "There.",
+      "voice": "assets/audio/vera/s1/line4", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Looks like something's going down... should we go and check?",
+      "voice": "assets/audio/vera/s1/line5", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "*muttering* Good eye.",
+      "voice": "assets/audio/ellie/s1/line6", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Let's go.",
+      "voice": "assets/audio/ellie/s1/line7", "emotion": "smiling"
+    }
+  ]
+}

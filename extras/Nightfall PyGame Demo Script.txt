@@ -177,19 +177,17 @@ Char2 (neutral) - *nods slightly* alright.
 
 Scene 2:
 
-Char2 (neutral) - ...
-Char2 (neutral) - I never got your name rookie.
+Char2 (neutral) - ...I never got your name rookie.
 Char2 (neutral) - Would be nice to know if you ask me.
 Char2 (teasing) - Or are you not talkative?
 Char1 (nervous) - ...Vera.
 Char2 (neutral) - Vera...?
 Char1 (neutral) - Yes, that is my name.
 Char2 (neutral) - Huh... faith and truth... that's...
-Char2 (smiling) - Kinda cute actually.
-Char2 (flustered) - *ahem*
-Char2 (flustered) - Forget I said anything.
+Char2 (smiling) - Kinda cute, actually.
+Char2 (flustered) - *ahem* Forget I said anything.
 Char1 (neutral) - It's fine... what's your name?
-Char1 (smiling) - You know, only fair since I told you mine.
+Char1 (smiling) - You know, it's only fair since I told you mine.
 Char2 (neutral) - Uh-huh, it's only fair.
 Char2 (smiling) - Name's Ellie.
 Char1 (thought) - Light and noble... I can see why.
@@ -218,8 +216,7 @@ Char2 (annoyed) - Not after such crap Ms. Negative.
 Char1 (sad) - I-... sorry... didn't mea- 
 Char2 (annoyed) - Sorry's not gonna cut it Vera.
 Char1 (sad) - I know... I didn't mean it.
-Char2 (annoyed) - ... *sighs*
-Char2 (annoyed) - Fine. Apology accepted, for now, just don't say stuff like that again or I will have to report it.
+Char2 (annoyed) - *sighs* Fine. Apology accepted, for now, just don't say stuff like that again or I will have to report it.
 Char1 (sad) - Hear you loud and clear, Ellie...
 
 -- "Lighten up" response --
@@ -365,7 +362,7 @@ Char1 (thought):
  - Sorry. (-Bad ending or ~Neutral ending) 
 *these choices get locked depending on the relationship point amount, negatives lock the good ending and positives keep the negative unlocked as an optional choice as in "I'm busy" not just "I'm a fuckin' prick"*
 
--- "Sorry." response (if positive) --
+-- "Sorry." response (if positive points) --
 Char1 (neutral) - Sorry, I can't.
 Char1 (hesitant) - I have some... stuff to do.
 Char1 (tired) - And I'm... *yawn* really tired.
@@ -378,7 +375,7 @@ Char1 (smiling) - I know.
 -- Neutral ending --
 
 
--- "Sorry." response (if negative) --
+-- "Sorry." response (if negative points) --
 
 Char1 (neutral) - Sorry, I'm just... not feeling it.
 Char1 (neutral) - I don't think it's a good idea...

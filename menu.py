@@ -6,7 +6,7 @@ from menu_audio import MenuAudio
 def run_menu():
     pygame.init()
     screen = pygame.display.set_mode((1280, 720))
-    pygame.display.set_caption("Nightfall")
+    pygame.display.set_caption("Nightfall - POC Edition")
 
     clock = pygame.time.Clock()
 
@@ -18,30 +18,24 @@ def run_menu():
     audio.play_music()
 
     # Background
-    background = pygame.image.load("assets/backgrounds/Scene2,5.png").convert()
+    background = pygame.image.load("assets/backgrounds/scene2_5.png").convert()
     background = pygame.transform.scale(background, (1280, 720))
 
     # Main menu buttons
     button_new = pygame_gui.elements.UIButton(
         relative_rect=pygame.Rect((540, 200), (200, 50)),
-        text="New Game",
-        manager=manager
-    )
-
-    button_continue = pygame_gui.elements.UIButton(
-        relative_rect=pygame.Rect((540, 260), (200, 50)),
-        text="Continue",
+        text="Play",
         manager=manager
     )
 
     button_settings = pygame_gui.elements.UIButton(
-        relative_rect=pygame.Rect((540, 320), (200, 50)),
+        relative_rect=pygame.Rect((540, 260), (200, 50)),
         text="Settings",
         manager=manager
     )
 
     button_credits = pygame_gui.elements.UIButton(
-        relative_rect=pygame.Rect((540, 380), (200, 50)),
+        relative_rect=pygame.Rect((540, 320), (200, 50)),
         text="Credits",
         manager=manager
     )
@@ -61,13 +55,18 @@ def run_menu():
         container=settings_panel
     )
 
+    # Volume slider logic
     volume_slider = pygame_gui.elements.UIHorizontalSlider(
         relative_rect=pygame.Rect((50, 100), (500, 40)),
-        start_value=50,
+        start_value=50,  # middle by default
         value_range=(0, 100),
         manager=manager,
         container=settings_panel
     )
+
+    # a fix to initialize actual volume
+    initial_volume = volume_slider.get_current_value() / 100.0
+    audio.set_volume(initial_volume)
 
     close_settings = pygame_gui.elements.UIButton(
         relative_rect=pygame.Rect((225, 300), (150, 50)),
@@ -89,8 +88,10 @@ def run_menu():
         "Created by Riho Luik\n"
         "Programming by Riho\n"
         "Story by Riho\n"
-        "Music & SFX by Riho\n"
-        "Art & Backgrounds by Riho\n\n"
+        "Music & most SFX by Riho\n"
+        "Art & Backgrounds by Riho\n"
+        "A lot of SFX gotten from freesound.org\n"
+        "SFX edited together by Riho\n\n"
         "Thanks for playing!"
     )
 
@@ -137,11 +138,7 @@ def run_menu():
                 if not overlay_active:
                     if event.ui_element == button_new:
                         audio.stop_music()
-                        nightfall.run_game(new_game=True)
-
-                    elif event.ui_element == button_continue:
-                        audio.stop_music()
-                        nightfall.run_game(new_game=False)
+                        nightfall.run_game()
 
                     elif event.ui_element == button_settings:
                         settings_panel.show()

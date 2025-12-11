@@ -1,0 +1,90 @@
+{
+  "id": "scene_2.5",
+  "dialogue": [
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Where are we going?",
+      "voice": "assets/audio/vera/s2.5/line1", "emotion": "confused"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Shouldn't we be going back to the precinct?",
+      "voice": "assets/audio/vera/s2.5/line2", "emotion": "confused"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "We will, just... gimme a moment.",
+      "voice": "assets/audio/ellie/s2.5/line1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Ookay...? Just don't do anything drastic.",
+      "voice": "assets/audio/vera/s2.5/line3", "emotion": "confused"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I promise, I won't.",
+      "voice": "assets/audio/ellie/s2.5/line2", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "...What are we doing near the festival stage?",
+      "voice": "assets/audio/vera/s2.5/line4", "emotion": "confused"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Just, trust me.",
+      "voice": "assets/audio/ellie/s2.5/line3", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "You're being vague on purpose.",
+      "voice": "assets/audio/vera/s2.5/line5", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "No, I'm not.",
+      "voice": "assets/audio/ellie/s2.5/line4", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Just... trust me. Okay?",
+      "voice": "assets/audio/ellie/s2.5/line5",
+      "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Alright...",
+      "voice": "assets/audio/vera/s2.5/line6", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "I swear this is gonna go drastically-",
+      "voice": "assets/audio/vera/s2.5/line7", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "*looks up* Wait... what's that above me?",
+      "voice": "assets/audio/vera/s2.5/line8", "emotion": "confused"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Is that a... is that a mistletoe?",
+      "voice": "assets/audio/vera/s2.5/line9", "emotion": "confused"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "You little-... ugh. I hate you. You absolute tease...",
+      "voice": "assets/audio/vera/s2.5/line10", "emotion": "annoyed"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "*chuckles* A little late for that.",
+      "voice": "ellie_s1.5l1", "emotion": "teasing"
+    },
+    {
+      "type": "image_screen",
+      "image": "assets/images/nokiss.png"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "scene_neutral",
+  "dialogue": [
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Sorry, I can't.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I have some... stuff to do.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "And I'm... *yawn* really tired.",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I... hope you understand.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "It's fine... I understand.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Go get your rest, I'll see you on Monday.",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Ugh, I hate Mondays.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I heard that.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I know.",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "image_screen",
+      "image": "assets/images/neutralend.png"
+    }
+  ]
+}

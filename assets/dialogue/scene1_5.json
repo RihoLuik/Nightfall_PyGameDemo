@@ -1,0 +1,224 @@
+{
+  "id": "scene_1.5",
+  "dialogue": [
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Alright we're he-",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "narration",
+      "line": "Two robbers appear out of nowhere from a store",
+      "voice": "glass_shatter"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Christ!",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "GET BACK HERE!",
+      "voice": "ellie_intro1", "emotion": "annoyed"
+    },
+    {
+      "type": "narration", "command": "hide", "target": "Partner",
+      "line": "Player goes after the second one",
+      "voice": "footsteps1"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "GET BACK HERE!",
+      "voice": "ellie_intro4", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Ugh... fuck...",
+      "voice": "vera_intro4", "emotion": "neutral"
+    },
+    {
+      "type": "narration",
+      "line": "Player looks around: two routes, two choices: keep chasing or cut them off",
+      "voice": "footsteps1"
+    },
+    {
+      "type": "choice", "timer": 3,
+      "choices": [
+        {
+          "text": "Don't catch.", "points": -1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Fuck it.",
+              "voice": "vera_bad1", "emotion": "neutral"
+            },
+            {
+              "type": "narration",
+              "line": "Player continues running after 'em but fails to catch 'em",
+              "voice": "footsteps1"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "SHIT!",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I should've been faster...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "narration",
+              "line": "Partner approaches from behind with the first robber",
+              "voice": "footsteps1"
+            },
+            {
+              "type": "line", "command": "show", "target": "Partner", "speaker": "Partner",
+              "line": "Where's the second one?",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Don't tell me you let 'em get away...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "*panting* ...what do you think?",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "*sigh* alright, first day on the job, happens.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "We'll find 'em later, let's just-",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Ngh- stay still! Let's just get this bastard back to the precinct...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "We got some interrogation to do...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "image_screen",
+              "image": "assets/images/nobudget.png"
+            }
+          ]
+        },
+        {
+          "text": "Catch!", "points": 1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "This should cut 'em off.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "narration",
+              "line": "Player runs to the alternate path to cut 'em off",
+              "voice": "footsteps1"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Alright... any moment now... *takes a steady breath- holds it- body flickers, then fades from sight*",
+              "voice": "ellie_good2", "emotion": "neutral"
+            },
+            {
+              "type": "narration",
+              "line": "2nd robber runs through the path",
+              "voice": "footsteps1"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "Think she gave up... fuck yeah!",
+              "voice": "vera_good2", "emotion": "neutral"
+            },
+            {
+              "type": "narration",
+              "line": "Player kicks a nearby trash can over to make 'em slip",
+              "voice": "footsteps1"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "WAITWAIT-!",
+              "voice": "vera_good2", "emotion": "neutral"
+            },
+            {
+              "type": "narration",
+              "line": "Player leaps onto the robber",
+              "voice": "footsteps1"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "GOTCHA!",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "oops...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Guess I'll just carry them back to her... *picks up the second robber*",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Got 'em...",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "command": "show", "target": "Partner", "speaker": "Partner",
+              "line": "That's good... what happened to 'em?",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "They uh... they ran into a wall. Yeah. A wall.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+                  "type": "line", "speaker": "Partner",
+                  "line": "Okay...? Well, let's bring 'em to the precinct.",
+                  "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+                  "type": "line", "speaker": "Partner",
+                  "line": "It's break time soon anyway.",
+                  "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+                  "type": "line", "speaker": "Player",
+                  "line": "Oh, right, okay.",
+                  "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+                  "type": "line", "speaker": "Partner",
+                  "line": "You okay? You're breathing heavily.",
+                  "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+                  "type": "line", "speaker": "Player",
+                  "line": "I'll be fine, just ran a bit faster than I'm used to.",
+                  "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+                  "type": "line", "speaker": "Partner",
+                  "line": "Alright.",
+                  "voice": "vera_good1", "emotion": "smiling"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

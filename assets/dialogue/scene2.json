@@ -1,0 +1,520 @@
+{
+  "id": "scene_2",
+  "dialogue": [
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "...I never got your name rookie.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Would be nice to know if you ask me.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Or are you not talkative?",
+      "voice": "vera_intro3", "emotion": "thought"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "...Vera.",
+      "voice": "ellie_intro1", "emotion": "annoyed"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Vera...?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Yes, that is my name.",
+      "voice": "ellie_intro4", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Huh... faith and truth... that's...",
+      "voice": "vera_intro4", "emotion": "neutral"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Kinda cute, actually.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "*ahem* Forget I said anything.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "It's fine... what's your name?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "You know, it's only fair since I told you mine.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Uh-huh, it's only fair.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Name's Ellie.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Light and noble... I can see why.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Light and noble? Why's that? You look into name meanings or something?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Obviously, and that’s what your name means. I look into that stuff sometimes, just a habit y'know?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Curiosity kills the cat... a little morbid meaning but all in all a literal thing that can happen.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I knew people like that. Friends, coworkers... idiots who poked their heads into wrong things.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "They were idiots yes, but not everything's gonna be sunshine and rainbows...",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I'm sure you'd know that...",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "You're right, I do... guess something like that is unavoidable in this line of work.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "choice", "timer": 5,
+      "choices": [
+        {
+          "text": "Ms. Negative", "points": -1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Oh well, to hell with it, it's not like we're touchable.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I've gone my whole life going through shit, and I'm still here.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I've seen hell like no one else, Ellie.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "People messing with things they shouldn’t... and paying the price.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "One by one. I just watched. I'm numb to it now.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "...what the fuck Vera? I'm numb to it now.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "...what the fuck Vera? Are you insane?",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "That's all you have to say? How did you even get through selection with such an attitude!?",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "You know what? I don't care, don't answer it.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I don't wanna hear it.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Not after such crap Ms. Negative.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I-... sorry... didn't mea-",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Sorry's not gonna cut it Vera.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I know... I didn't mean it.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "*sighs* Fine. Apology accepted, for now, just don't say stuff like that again or I will have to report it.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Hear you loud and clear, Ellie...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            }
+          ]
+        },
+        {
+          "text": "Lighten up", "points": 1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "...sooo uh... I'm not exactly a good conversation starter but uh...",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Do you have any... pets?",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Just curious...",
+              "voice": "ellie_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Pets? Well, if you really wanna know...",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "A cat.",
+              "voice": "vera_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "A cat?",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "Yeah, a cat.",
+              "voice": "vera_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "That's nice... I... I always wanted one... never got one though.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Oh... sorry to hear that.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "I'm sure Grumpy would like you.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Grumpy?",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Yeah, that's what I called 'em. They are quite literally, grumpy.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "*chuckles* That's... a nice name. I like it.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Glad you think so.",
+              "voice": "vera_good1", "emotion": "smiling"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "narration",
+      "line": "Christmas lights flicker overhead as the two enjoy the break time...",
+      "voice": "footsteps1"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "*sigh* you ever wonder if we'd get a normal Christmas this week?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "Like with all the snow and stuff?",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "line", "speaker": "Partner",
+      "line": "I always hope we'd do, no snow is just... boring. Puddles and stuff all around.",
+      "voice": "ellie_s1.5l1", "emotion": "angry"
+    },
+    {
+      "type": "choice",
+      "choices": [
+        {
+          "text": "Hopeful", "points": 1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I hope so.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "It's not really Christmas if there's no snow right?",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "All these puddles should be frozen or something by now.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "It is freezing even in this warm outfit.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "narration",
+              "line": "Or you're just not used to the cold.",
+              "voice": "footsteps1"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "These are pretty warm.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Not my point but okay...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "It should start snowing soon... really.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "You're right, it should...",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "I just hope you're right.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            }
+          ]
+        },
+        {
+          "text": "Sad", "points": 1,
+          "branch": [
+            {
+              "type": "line", "speaker": "Player",
+              "line": "It really wouldn't change much for me...",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "How so?",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Partner",
+              "line": "Well... even if the snow was on the ground or not...",
+              "voice": "ellie_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "I've never had a real Christmas.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "No one to spend time with, to celebrate it...",
+              "voice": "vera_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Just loneliness in the cold.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Robber2",
+              "line": "...why's that? You had parents to spend it with right?",
+              "voice": "vera_good2", "emotion": "neutral"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "...right?",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "Oh...",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "I was just an orphan.",
+              "voice": "ellie_bad2", "emotion": "annoyed"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "A freak accident.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "It was years ago, but Christmas just... reminds me of it every time.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "I'm here.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "...What do you mean...?",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "...I'm here, Vera.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "That's what I mean.",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "...Thanks...",
+              "voice": "vera_good1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
+              "line": "You're welcome...",
+              "voice": "vera_good1", "emotion": "smiling"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "You know... I got an idea.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "What's that?",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "We could... spend the Christmas together.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Then you wouldn't be alone... or cold.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "And I'm sure Grumpy would love to see someone new as well.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "I'll have to think about it...",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Not ready to give an answer right away.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "That's fine. I can ask again after the day's over?",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Sure.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Now, we should start to head back.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Break time's gonna be over soon.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "You ready to go?",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Oh uhm, yeah, I'm ready.",
+      "voice": "vera_good1", "emotion": "smiling"
+    },
+    {
+      "type": "line", "speaker": "Player",
+      "line": "Let's go then.",
+      "voice": "vera_good1", "emotion": "smiling"
+    }
+  ]
+}
