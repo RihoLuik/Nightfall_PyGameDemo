@@ -26,7 +26,7 @@ class MenuAudio:
 
     def play_music(self):
         try:
-            pygame.mixer.music.load("assets/audio/menu_music.ogg")
+            pygame.mixer.music.load("assets/audio/music/Nightfall-Theme.ogg")
             pygame.mixer.music.set_volume(0.6)
             pygame.mixer.music.play(-1)
         except Exception as e:

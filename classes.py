@@ -29,18 +29,50 @@ class AudioManager:
                         print(f"Failed to load sound '{full_path}': {e}")
 
     def play(self, name):
-        # Strip extension and "assets/audio/" if present
+        """
+        Plays a sound AND returns the channel so DialogueSystem can
+        detect when the voice line finishes.
+        """
+        # Normalize key
+        key = name.replace("assets/audio/", "").rsplit(".", 1)[0].replace("\\", "/")
+        sound = self.sounds.get(key)
+
+        if not sound:
+            print(f"[AudioManager] Sound not found: {name}")
+            return None
+
+        # Find channel
+        channel = pygame.mixer.find_channel()
+        if channel:
+            channel.play(sound)
+            return channel
+
+        print("[AudioManager] WARNING: No free audio channels!")
+        return None
+
+    def stop(self, name):
+        # Stop based on key
         key = name.replace("assets/audio/", "").rsplit(".", 1)[0].replace("\\", "/")
         sound = self.sounds.get(key)
         if sound:
-            sound.play()
-        else:
-            print(f"[AudioManager] Sound not found: {name}")
-
-    def stop(self, name):
-        sound = self.sounds.get(name)
-        if sound:
             sound.stop()
+
+    def play_music(self, path, volume=1.0):
+        """
+        Loads and plays a music track (.ogg or .mp3)
+        """
+        try:
+            pygame.mixer.music.load(path)
+            pygame.mixer.music.set_volume(volume)
+            pygame.mixer.music.play(-1)  # loop
+        except Exception as e:
+            print(f"[AudioManager] Failed to play music '{path}': {e}")
+
+    def stop_music(self):
+        pygame.mixer.music.stop()
+
+    def set_music_volume(self, vol):
+        pygame.mixer.music.set_volume(vol)
 
 # -----------------------
 # RelationshipTracker
@@ -97,10 +129,8 @@ class Scene:
         Loads scene background, references preloaded character sprites,
         and loads a single scene JSON file.
     """
+
     def __init__(self, background_path, dialogue_file, preloaded_characters, background_music=None):
-        """
-            preloaded_characters: dict of char_name -> dict of emotion -> Surface
-        """
         self.background = pygame.image.load(background_path).convert()
         self.characters = preloaded_characters
 
@@ -109,7 +139,12 @@ class Scene:
 
         self.id = data.get("id")
         self.dialogue = data.get("dialogue", [])
-        self.background_music = background_music  # path to music file (optional)
+
+        self.background_music = background_music  # path to music file
+
+    def start(self, audio_manager):
+        if self.background_music:
+            audio_manager.play_music(self.background_music)
 
 # -----------------------
 # Dialogue System
@@ -194,11 +229,9 @@ class DialogueSystem:
         if line_type in ["line", "narration"]:
             voice = line_data.get("voice")
             if voice:
-                try:
-                    self.audio.play(voice)
-                except Exception:
-                    pass
-                self.current_voice = voice
+                self.current_voice_channel = self.audio.play(voice)
+            else:
+                self.current_voice_channel = None
             self.waiting = True
             return line_data
 
@@ -265,11 +298,15 @@ class DialogueSystem:
         # For normal dialogue/narration, advance after voice ends
         if line_type in ["line", "narration"] and self.waiting:
             # advance when no sounds playing (voice finished)
-            try:
-                busy = pygame.mixer.get_busy()
-            except Exception:
-                busy = False
-            if not busy:
+            # If we have a voice channel, wait for it
+            if self.current_voice_channel:
+                if not self.current_voice_channel.get_busy():  # voice finished
+                    self.waiting = False
+                    self.index += 1
+                    return self.start_line()
+
+            # If no voice → auto-advance immediately
+            else:
                 self.waiting = False
                 self.index += 1
                 return self.start_line()
@@ -576,6 +613,8 @@ class GameManager:
         self.current_scene_index = 0
         self.current_scene = scenes[0]
 
+        self.current_music = None
+
         self.dialogue_system = DialogueSystem(
             self.current_scene.dialogue,
             self.audio,
@@ -585,7 +624,7 @@ class GameManager:
         self.current_line = self.dialogue_system.start_line()
         self.active = True
 
-        self.current_music = None
+        self.play_scene_music()
 
     def play_scene_music(self):
         scene = self.current_scene
@@ -625,19 +664,18 @@ class GameManager:
                 self.current_line = new_line
 
     def next_scene(self):
+        print(f"Moving to next scene index: {self.current_scene_index + 1}")
+
         self.current_scene_index += 1
         if self.current_scene_index >= len(self.scenes):
+            print("End of scenes reached.")
             self.active = False
             return
 
         self.current_scene = self.scenes[self.current_scene_index]
-        self.dialogue_system = DialogueSystem(
-            self.current_scene.dialogue,
-            self.audio,
-            self.font
-        )
-        self.current_line = self.dialogue_system.start_line()
-        self.play_scene_music()  # <-- music changes with scene
+        print(f"Loaded scene: {self.current_scene.id}")
+        self.current_scene.start(self.audio)
+        self.play_scene_music()
 
     def start_next_scene(self):
         """

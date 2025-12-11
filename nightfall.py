@@ -4,18 +4,19 @@ from classes import GameManager, Scene, AudioManager, RelationshipTracker
 
 # List of scenes and their backgrounds
 scene_list = [
-    ("scene1", "assets/backgrounds/scene1.png", "assets/music/scene1_theme.ogg"),
-    ("scene1_5", "assets/backgrounds/scene1_5.png", "assets/music/scene1_5_theme.ogg"),
-    ("scene2", "assets/backgrounds/scene2.png", "assets/music/scene2_theme.ogg"),
-    ("scene2_5", "assets/backgrounds/scene2_5.png", "assets/music/scene2_5_theme.ogg"),
-    ("scene3", "assets/backgrounds/scene3.png", "assets/music/scene3_theme.ogg"),
-    ("scene_neutral", "assets/backgrounds/scene3.png", "assets/music/neutral_end.ogg"),
-    ("scene_good", "assets/backgrounds/scene3.png", "assets/music/good_end.ogg"),
-    ("scene_bad", "assets/backgrounds/scene3.png", "assets/music/bad_end.ogg")
+    ("scene1", "assets/backgrounds/scene1.png", "assets/audio/music/First-Day.ogg"),
+    ("scene1_5", "assets/backgrounds/scene1_5.png", "assets/audio/music/Chase-Em.ogg"),
+    ("scene2", "assets/backgrounds/scene2.png", "assets/audio/music/Break-Time.ogg"),
+    ("scene2_5", "assets/backgrounds/scene2_5.png", "assets/audio/music/Fallen.ogg"),
+    ("scene3", "assets/backgrounds/scene3.png", "assets/audio/music/After-Work.ogg"),
+    ("scene_neutral", "assets/backgrounds/scene3.png", "assets/audio/music/Neutral-End.ogg"),
+    ("scene_good", "assets/backgrounds/scene3.png", "assets/audio/music/Good-End.ogg"),
+    ("scene_bad", "assets/backgrounds/scene3.png", "assets/audio/music/Bad-End.ogg")
 ]
 
 def run_game():
     pygame.init()
+    pygame.mixer.init()
     screen = pygame.display.set_mode((1280, 720))
     clock = pygame.time.Clock()
     font = pygame.font.SysFont("Arial", 28)
@@ -45,10 +46,13 @@ def run_game():
 
     # Preload all scenes
     scenes = []
-    for scene_name, bg_path in scene_list:
+    for scene_name, bg_path, music_path in scene_list:
         dialogue_path = f"assets/dialogue/{scene_name}.json"
-        scene = Scene(bg_path, dialogue_path, characters)
-        scenes.append(scene)
+        try:
+            scene = Scene(bg_path, dialogue_path, characters, music_path)
+            scenes.append(scene)
+        except Exception as e:
+            print(f"Scene load error in {scene_name}: {e}")
 
     # Setup GameManager
     game_manager = GameManager(screen, scenes, audio_manager, font, relationship_tracker)
