@@ -2,84 +2,84 @@
   "id": "scene_good",
   "dialogue": [
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Sure, I'd love to.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/good1", "emotion": "smiling"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Where to?",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/good2", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "I can lead you to the humble abode if you follow me.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/good1", "emotion": "smiling"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Alright, alright, lead me to this wonderful place you keep speaking of.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/vera/s3/good3", "emotion": "smiling"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "With pleasure.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/good2", "emotion": "smiling"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "You're gonna get along with Grumpy.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/good3", "emotion": "smiling"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "I'm sure of that.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/good4", "emotion": "smiling"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "What makes you so sure?",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/vera/s3/good4", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Don't know, just a gut feeling.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/good5", "emotion": "smiling"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Uh-huh...",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/good5", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Say that again and I'll find a mistletoe to tease you with-",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/good6", "emotion": "teasing"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Nope nope. I swear I will keep my mouth shut, I swear!",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/vera/s3/good6", "emotion": "shocked"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "You better... cause I won't tell you if I do find one.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/good7", "emotion": "teasing"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "I signed up for hell didn't I?",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/good7", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Keep telling yourself that.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/good8", "emotion": "smiling"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "By the way, if Grumpy scratches you, it's their way of showing affection.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/good9", "emotion": "smiling"
     },
     {
       "type": "image_screen",

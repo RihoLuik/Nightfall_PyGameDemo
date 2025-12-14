@@ -2,59 +2,59 @@
   "id": "scene_bad",
   "dialogue": [
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Sorry, I'm just... not feeling it.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/bad1", "emotion": "neutral"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "I don't think it's a good idea...",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/bad2", "emotion": "neutral"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Especially with my attitude and all that.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/vera/s3/bad3", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "*slight pause and a disappointed exhale*",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/bad1", "emotion": "disappointed"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Right... figured, should've seen that coming.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/bad2", "emotion": "disappointed"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "*huffs* Shouldn't have even offered it.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/bad3", "emotion": "disappointed"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "I'll see you on Monday.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/bad4", "emotion": "annoyed"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "If you're late again then I'm writing you up.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/bad5", "emotion": "annoyed"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Just keep that in mind.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/bad6", "emotion": "annoyed"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Yeah, yeah, sure, whatever.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/vera/s3/bad4", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "*muttering under breath* Pendejo...",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/bad7", "emotion": "annoyed"
     },
     {
       "type": "image_screen",

@@ -437,8 +437,8 @@ class DialogueSystem:
         # Draw all visible characters (Partner = left, Player = right)
         # Uses dims for inactive speaker and full alpha for active speaker.
         # Determine left/right names for multi-character rendering
-        left_name = "Partner"  # e.g. Ellie
-        right_name = "Player"  # e.g. Vera
+        left_name = "Partner"  # Ellie
+        right_name = "Player"  # Vera
 
         # Helper function: safely get a Surface for a character + emotion
         def _get_sprite(name, emotion_key="neutral"):
@@ -461,7 +461,7 @@ class DialogueSystem:
                 alpha_val = 255 if active_speaker == left_name else 120
                 sprite_to_draw = left_sprite.copy()
                 sprite_to_draw.set_alpha(alpha_val)
-                screen.blit(sprite_to_draw, (100, 200))
+                screen.blit(sprite_to_draw, (100, 100))
             except Exception:
                 screen.blit(left_sprite, (100, 200))
 
@@ -475,7 +475,7 @@ class DialogueSystem:
                 alpha_val = 255 if active_speaker == right_name else 120
                 sprite_to_draw = right_sprite.copy()
                 sprite_to_draw.set_alpha(alpha_val)
-                screen.blit(sprite_to_draw, (right_x, 200))
+                screen.blit(sprite_to_draw, (right_x, 100))
             except Exception:
                 screen.blit(right_sprite, (sw - sprite_w - 100, 200))
 
@@ -645,7 +645,15 @@ class GameManager:
             self.next_scene()
 
         new_line = self.dialogue_system.update(dt)
+
         if new_line:
+            # Detect scene jumps
+            if isinstance(new_line, dict) and new_line.get("type") == "scene_jump":
+                target = new_line.get("target")
+                print(f"Jump requested → {target}")
+                self.change_scene_by_id(target)
+                return
+
             self.current_line = new_line
 
     def draw(self):
@@ -695,3 +703,23 @@ class GameManager:
         next_scene_id = self.current_scene.next_scene
         if next_scene_id:
             self.load_scene(next_scene_id)
+
+    def change_scene_by_id(self, scene_id):
+        for i, scene in enumerate(self.scenes):
+            if scene.id == scene_id:
+                self.current_scene_index = i
+                self.current_scene = scene
+
+                # restart dialogue
+                self.dialogue_system = DialogueSystem(
+                    scene.dialogue,
+                    self.audio,
+                    self.font
+                )
+                self.current_line = self.dialogue_system.start_line()
+
+                self.play_scene_music()
+                print(f"Scene changed to: {scene_id}")
+                return
+
+        print(f"[ERROR] Scene ID '{scene_id}' not found.")

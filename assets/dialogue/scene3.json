@@ -1,81 +1,81 @@
 {
-  "id": "scene_3",
+  "id": "scene3",
   "dialogue": [
     {
       "type": "line", "speaker": "Partner",
       "line": "So, how was your first day rookie?",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line1", "emotion": "curious"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "It was good right? I mean, I had a good enough time.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line2", "emotion": "curious"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "At least considering how these patrol days usually go...",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/line3", "emotion": "smiling"
     },
     {
-      "type": "choice", "timer": 5,
+      "type": "choice", "timer": 3,
       "choices": [
         {
           "text": "It was fine.", "points": -1,
           "branch": [
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "It was fine... I don't really... expect much from people or really anything in that matter...",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/vera/s3/fine1", "emotion": "hesitant"
             },
             {
               "type": "line", "speaker": "Partner",
               "line": "Just fine? Really?",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/ellie/s3/fine1", "emotion": "annoyed"
             },
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "Yeah. Just fine. I don't think I have to repeat myself.",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/vera/s3/fine2", "emotion": "neutral"
             },
             {
               "type": "line", "speaker": "Partner",
               "line": "You know, sometimes you're really hard to read, you know that?",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/ellie/s3/fine2", "emotion": "annoyed"
             },
             {
               "type": "line", "speaker": "Partner",
               "line": "And it's still the first day.",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/ellie/s3/fine3", "emotion": "annoyed"
             },
             {
               "type": "line", "speaker": "Partner",
               "line": "Just... be honest for once.",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/ellie/s3/fine4", "emotion": "disappointed"
             },
             {
               "type": "line", "speaker": "Partner",
               "line": "Without hiding it behind some 'I'm too tough to have emotions' persona.",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/ellie/s3/fine5", "emotion": "annoyed"
             },
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "Hm...",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/vera/s3/fine3", "emotion": "neutral"
             },
             {
               "type": "line", "speaker": "Partner",
               "line": "Whatever...",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/ellie/s3/fine6", "emotion": "annoyed"
             },
             {
               "type": "line", "speaker": "Partner",
               "line": "Just... try to be more open.",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/ellie/s3/fine7", "emotion": "annoyed"
             },
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "Fine.",
-              "voice": "ellie_bad2", "emotion": "annoyed"
+              "voice": "assets/audio/vera/s3/fine4", "emotion": "neutral"
             }
           ]
         },
@@ -85,37 +85,37 @@
             {
               "type": "line", "speaker": "Player",
               "line": "It was... better than I expected.",
-              "voice": "vera_good1", "emotion": "smiling"
+              "voice": "assets/audio/vera/s3/better1", "emotion": "hesitant"
             },
             {
               "type": "line", "speaker": "Player",
               "line": "I expected it to be really difficult and...",
-              "voice": "vera_good1", "emotion": "smiling"
+              "voice": "assets/audio/vera/s3/better2", "emotion": "hesitant"
             },
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "You know, like... something that rookies would just not wanna do.",
-              "voice": "ellie_good2", "emotion": "neutral"
+              "voice": "assets/audio/vera/s3/better3", "emotion": "hesitant"
             },
             {
               "type": "line", "speaker": "Player",
               "line": "I guess I mean to say that... I had fun.",
-              "voice": "vera_good1", "emotion": "smiling"
-            },
-            {
-              "type": "line", "speaker": "Robber2",
-              "line": "At least for the first day that is.",
-              "voice": "vera_good2", "emotion": "neutral"
+              "voice": "assets/audio/vera/s3/better4", "emotion": "hesitant"
             },
             {
               "type": "line", "speaker": "Player",
-              "line": "*chuckles* At least you had fun.",
-              "voice": "vera_good1", "emotion": "smiling"
+              "line": "At least for the first day that is.",
+              "voice": "assets/audio/vera/s3/better5", "emotion": "neutral"
             },
             {
-              "type": "line", "speaker": "Robber2",
+              "type": "line", "speaker": "Partner",
+              "line": "*chuckles* At least you had fun.",
+              "voice": "assets/audio/ellie/s3/better1", "emotion": "smiling"
+            },
+            {
+              "type": "line", "speaker": "Player",
               "line": "Yeah... at least I did.",
-              "voice": "vera_good2", "emotion": "neutral"
+              "voice": "assets/audio/vera/s3/better6", "emotion": "smiling"
             }
           ]
         }
@@ -124,52 +124,41 @@
     {
       "type": "line", "speaker": "Partner",
       "line": "So... about what I said back at the café...",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line4", "emotion": "smiling"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Do you... wanna take up on that offer?",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line5", "emotion": "smiling"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "To spend time together?",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line6", "emotion": "smiling"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "I mean, it would be nice right?",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line7", "emotion": "shy"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Just the two of us... and Grumpy of course.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line8", "emotion": "shy"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "You've had quite a lot of time to think...",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line9", "emotion": "shy"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "So I just wanna know your answer.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/line10", "emotion": "smiling"
     },
     {
-      "type": "choice",
-      "choices": [
-        {
-          "text": "Yes.",
-          "target": "scene_good",
-          "lock_condition": "relationship < 0"
-        },
-        {
-          "text": "Sorry.",
-          "target_positive": "scene_neutral",
-          "target_negative": "scene_bad"
-        }
-      ]
+      "type": "scene_jump",
+      "target": "scene_good"
     }
   ]
 }

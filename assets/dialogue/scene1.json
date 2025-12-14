@@ -1,5 +1,5 @@
 {
-  "id": "scene_1",
+  "id": "scene1",
   "dialogue": [
     {
       "type": "line", "speaker": "Player",
@@ -13,13 +13,13 @@
     },
     {
       "type": "line", "speaker": "Player",
-      "line": "Ugh... should be close anyway...",
+      "line": "Should be around the corner... I think?",
       "voice": "assets/audio/vera/intro/line3", "emotion": "thought"
     },
     {
       "type": "narration",
       "line": "A few minutes later...",
-      "voice": "footsteps1"
+      "voice": "assets/audio/sfx/footsteps3"
     },
     {
       "type": "line", "speaker": "Partner",
@@ -47,7 +47,7 @@
       "voice": "assets/audio/vera/s1/line1", "emotion": "neutral"
     },
     {
-      "type": "choice", "timer": 5,
+      "type": "choice", "timer": 3,
       "choices": [
         {
           "text": "Let's just get this over with.", "points": -1,
@@ -114,7 +114,7 @@
     {
       "type": "narration",
       "line": "Patrolling on street...",
-      "voice": "footsteps1"
+      "voice": "assets/audio/sfx/footsteps2"
     },
     {
       "type": "line", "speaker": "Partner",
@@ -122,7 +122,7 @@
       "voice": "assets/audio/ellie/s1/line3", "emotion": "neutral"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Nope... nothing yet.",
       "voice": "assets/audio/vera/s1/line3", "emotion": "neutral"
     },
@@ -174,7 +174,7 @@
             },
             {
               "type": "line", "speaker": "Player",
-              "line": "Alright, um... what do you call a robbert who has electricity and invisibility powers?",
+              "line": "Alright, um... what do you call a robber who has electricity and invisibility powers?",
               "voice": "assets/audio/vera/s1/joke2", "emotion": "neutral"
             },
             {
@@ -213,7 +213,7 @@
               "voice": "assets/audio/ellie/s1/joke4", "emotion": "neutral"
             },
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "*muttering* yeah... used to sound cooler.",
               "voice": "assets/audio/vera/s1/joke7", "emotion": "annoyed"
             },
@@ -223,7 +223,7 @@
               "voice": "assets/audio/ellie/s1/joke5", "emotion": "confused"
             },
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "Nothing.",
               "voice": "assets/audio/vera/s1/joke8", "emotion": "neutral"
             },
@@ -238,7 +238,7 @@
               "voice": "assets/audio/ellie/s1/joke7", "emotion": "smiling"
             },
             {
-              "type": "line", "speaker": "Partner",
+              "type": "line", "speaker": "Player",
               "line": "Heh...eh...",
               "voice": "assets/audio/vera/s1/joke9", "emotion": "awkward"
             }
@@ -265,6 +265,15 @@
       "type": "line", "speaker": "Partner",
       "line": "Let's go.",
       "voice": "assets/audio/ellie/s1/line7", "emotion": "smiling"
+    },
+    {
+      "type": "narration",
+      "line": "Going to the scene...",
+      "voice": "assets/audio/sfx/footsteps1"
+    },
+    {
+      "type": "scene_jump",
+      "target": "scene1_5"
     }
   ]
 }

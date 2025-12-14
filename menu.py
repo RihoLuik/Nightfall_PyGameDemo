@@ -21,6 +21,15 @@ def run_menu():
     background = pygame.image.load("assets/backgrounds/scene2_5.png").convert()
     background = pygame.transform.scale(background, (1280, 720))
 
+    # Logo
+    logo = pygame.image.load("assets/ui/logo.png").convert_alpha()
+
+    # Scale if needed
+    logo = pygame.transform.scale(logo, (800, 600))  # change size to whatever fits
+
+    # Position (centered horizontally, placed near top)
+    logo_rect = logo.get_rect(center=(1280 // 2, 120))
+
     # Main menu buttons
     button_new = pygame_gui.elements.UIButton(
         relative_rect=pygame.Rect((540, 200), (200, 50)),
@@ -84,14 +93,14 @@ def run_menu():
     credits_panel.hide()
 
     credits_text = (
-        "Nightfall\n\n"
+        "Nightfall\n"
         "Created by Riho Luik\n"
-        "Programming by Riho\n"
-        "Story by Riho\n"
-        "Music & most SFX by Riho\n"
-        "Art & Backgrounds by Riho\n"
-        "A lot of SFX gotten from freesound.org\n"
+        "Programming, Story, Art & Backgrounds, Music & Voice acting by Riho\n"
         "SFX edited together by Riho\n\n"
+        "freesound.org credits:\n"
+        "fluorescent light flickering 1.wav by TemperMode\n"
+        "Light switch fluorescent flickering electric bulb BANFF 190107.flac by TRP\n"
+        "concrete footstep 3 by Yoyodaman234\n\n"
         "Thanks for playing!"
     )
 
@@ -159,6 +168,7 @@ def run_menu():
         manager.update(time_delta)
 
         screen.blit(background, (0, 0))
+        screen.blit(logo, logo_rect)
         manager.draw_ui(screen)
         pygame.display.flip()
 

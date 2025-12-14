@@ -2,49 +2,49 @@
   "id": "scene_neutral",
   "dialogue": [
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Sorry, I can't.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/neutral1", "emotion": "neutral"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "I have some... stuff to do.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/neutral2", "emotion": "hesitant"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "And I'm... *yawn* really tired.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/vera/s3/neutral3", "emotion": "tired"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "I... hope you understand.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/neutral4", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "It's fine... I understand.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/neutral1", "emotion": "disappointed"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "Go get your rest, I'll see you on Monday.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/ellie/s3/neutral2", "emotion": "neutral"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "Ugh, I hate Mondays.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/vera/s3/neutral5", "emotion": "neutral"
     },
     {
       "type": "line", "speaker": "Partner",
       "line": "I heard that.",
-      "voice": "ellie_s1.5l1", "emotion": "angry"
+      "voice": "assets/audio/ellie/s3/neutral3", "emotion": "smiling"
     },
     {
-      "type": "line", "speaker": "Partner",
+      "type": "line", "speaker": "Player",
       "line": "I know.",
-      "voice": "vera_intro3", "emotion": "thought"
+      "voice": "assets/audio/vera/s3/neutral6", "emotion": "smiling"
     },
     {
       "type": "image_screen",
